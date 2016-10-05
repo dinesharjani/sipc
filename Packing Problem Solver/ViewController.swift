@@ -25,7 +25,17 @@ class ViewController: NSViewController {
     }
 	
 	@IBAction func browseButtonTapped(sender: AnyObject) {
-		problemFilePathField?.stringValue = "button tapped!"
+		let problemFileDialog: NSOpenPanel = NSOpenPanel()
+		problemFileDialog.runModal()
+		
+		guard let problemFilePath = problemFileDialog.url?.path else {
+			problemFilePathField?.stringValue = "No file selected!"
+			problemFilePathField?.textColor = NSColor.red
+			return
+		}
+		
+		problemFilePathField?.stringValue = problemFilePath
+		problemFilePathField?.textColor = NSColor.black
 	}
 }
 

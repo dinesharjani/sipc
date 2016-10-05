@@ -16,6 +16,9 @@
 		AAA9BA521DA55EA80065646E /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA9BA511DA55EA80065646E /* Rectangle.swift */; };
 		AAA9BA531DA55EA80065646E /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA9BA511DA55EA80065646E /* Rectangle.swift */; };
 		AAA9BA541DA55EA80065646E /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA9BA511DA55EA80065646E /* Rectangle.swift */; };
+		AAA9BA561DA5617A0065646E /* Problem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA9BA551DA5617A0065646E /* Problem.swift */; };
+		AAA9BA571DA5617A0065646E /* Problem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA9BA551DA5617A0065646E /* Problem.swift */; };
+		AAA9BA581DA5617A0065646E /* Problem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA9BA551DA5617A0065646E /* Problem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,7 @@
 		AA7F0F611DA553380014722D /* Packing_Problem_SolverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Packing_Problem_SolverUITests.swift; sourceTree = "<group>"; };
 		AA7F0F631DA553380014722D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAA9BA511DA55EA80065646E /* Rectangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
+		AAA9BA551DA5617A0065646E /* Problem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				AAA9BA511DA55EA80065646E /* Rectangle.swift */,
+				AAA9BA551DA5617A0065646E /* Problem.swift */,
 			);
 			path = "Data Classes";
 			sourceTree = "<group>";
@@ -272,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAA9BA521DA55EA80065646E /* Rectangle.swift in Sources */,
+				AAA9BA561DA5617A0065646E /* Problem.swift in Sources */,
 				AA7F0F471DA553380014722D /* ViewController.swift in Sources */,
 				AA7F0F451DA553380014722D /* AppDelegate.swift in Sources */,
 			);
@@ -282,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA7F0F571DA553380014722D /* Packing_Problem_SolverTests.swift in Sources */,
+				AAA9BA571DA5617A0065646E /* Problem.swift in Sources */,
 				AAA9BA531DA55EA80065646E /* Rectangle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA7F0F621DA553380014722D /* Packing_Problem_SolverUITests.swift in Sources */,
+				AAA9BA581DA5617A0065646E /* Problem.swift in Sources */,
 				AAA9BA541DA55EA80065646E /* Rectangle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

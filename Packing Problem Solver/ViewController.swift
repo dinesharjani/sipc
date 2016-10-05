@@ -36,6 +36,12 @@ class ViewController: NSViewController {
 		
 		problemFilePathField?.stringValue = problemFilePath
 		problemFilePathField?.textColor = NSColor.black
+		
+		do {
+			let _ = try Problem(filePath: problemFilePath)
+		} catch {
+			
+		}
 	}
 }
 

@@ -8,12 +8,16 @@
 
 import Cocoa
 
+enum ProblemError: Error {
+	case couldNotRead
+}
+
 class Problem: NSObject {
 
 	let stripWidth: Int
 	let rectangles: [Rectangle]
 	
-	init(filePath: String) {
+	init(filePath: String) throws {
 		
 		// TODO read from a file.
 		self.stripWidth = 0

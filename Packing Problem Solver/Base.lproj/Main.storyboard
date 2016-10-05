@@ -708,9 +708,9 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3My-bu-iCR">
-                                <rect key="frame" x="178" y="196" width="81" height="32"/>
+                                <rect key="frame" x="178" y="196" width="87" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="69" id="Rx6-3J-MLi"/>
+                                    <constraint firstAttribute="width" constant="75" id="Rx6-3J-MLi"/>
                                     <constraint firstAttribute="height" constant="21" id="YvB-4q-wSs"/>
                                 </constraints>
                                 <buttonCell key="cell" type="push" title="Browse..." bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Wz0-Ly-VFV">

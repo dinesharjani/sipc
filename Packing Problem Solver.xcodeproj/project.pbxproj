@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA7F0F451DA553380014722D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7F0F441DA553380014722D /* AppDelegate.swift */; };
+		AA7F0F471DA553380014722D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7F0F461DA553380014722D /* ViewController.swift */; };
+		AA7F0F491DA553380014722D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA7F0F481DA553380014722D /* Assets.xcassets */; };
+		AA7F0F4C1DA553380014722D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA7F0F4A1DA553380014722D /* Main.storyboard */; };
+		AA7F0F571DA553380014722D /* Packing_Problem_SolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7F0F561DA553380014722D /* Packing_Problem_SolverTests.swift */; };
+		AA7F0F621DA553380014722D /* Packing_Problem_SolverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7F0F611DA553380014722D /* Packing_Problem_SolverUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AA7F0F531DA553380014722D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA7F0F391DA553380014722D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA7F0F401DA553380014722D;
+			remoteInfo = "Packing Problem Solver";
+		};
+		AA7F0F5E1DA553380014722D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA7F0F391DA553380014722D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA7F0F401DA553380014722D;
+			remoteInfo = "Packing Problem Solver";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AA7F0F411DA553380014722D /* Packing Problem Solver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Packing Problem Solver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA7F0F441DA553380014722D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AA7F0F461DA553380014722D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AA7F0F481DA553380014722D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA7F0F4B1DA553380014722D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AA7F0F4D1DA553380014722D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA7F0F521DA553380014722D /* Packing Problem SolverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Packing Problem SolverTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA7F0F561DA553380014722D /* Packing_Problem_SolverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Packing_Problem_SolverTests.swift; sourceTree = "<group>"; };
+		AA7F0F581DA553380014722D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA7F0F5D1DA553380014722D /* Packing Problem SolverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Packing Problem SolverUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA7F0F611DA553380014722D /* Packing_Problem_SolverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Packing_Problem_SolverUITests.swift; sourceTree = "<group>"; };
+		AA7F0F631DA553380014722D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA7F0F3E1DA553380014722D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA7F0F4F1DA553380014722D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA7F0F5A1DA553380014722D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA7F0F381DA553380014722D = {
+			isa = PBXGroup;
+			children = (
+				AA7F0F431DA553380014722D /* Packing Problem Solver */,
+				AA7F0F551DA553380014722D /* Packing Problem SolverTests */,
+				AA7F0F601DA553380014722D /* Packing Problem SolverUITests */,
+				AA7F0F421DA553380014722D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AA7F0F421DA553380014722D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA7F0F411DA553380014722D /* Packing Problem Solver.app */,
+				AA7F0F521DA553380014722D /* Packing Problem SolverTests.xctest */,
+				AA7F0F5D1DA553380014722D /* Packing Problem SolverUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA7F0F431DA553380014722D /* Packing Problem Solver */ = {
+			isa = PBXGroup;
+			children = (
+				AA7F0F441DA553380014722D /* AppDelegate.swift */,
+				AA7F0F461DA553380014722D /* ViewController.swift */,
+				AA7F0F481DA553380014722D /* Assets.xcassets */,
+				AA7F0F4A1DA553380014722D /* Main.storyboard */,
+				AA7F0F4D1DA553380014722D /* Info.plist */,
+			);
+			path = "Packing Problem Solver";
+			sourceTree = "<group>";
+		};
+		AA7F0F551DA553380014722D /* Packing Problem SolverTests */ = {
+			isa = PBXGroup;
+			children = (
+				AA7F0F561DA553380014722D /* Packing_Problem_SolverTests.swift */,
+				AA7F0F581DA553380014722D /* Info.plist */,
+			);
+			path = "Packing Problem SolverTests";
+			sourceTree = "<group>";
+		};
+		AA7F0F601DA553380014722D /* Packing Problem SolverUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AA7F0F611DA553380014722D /* Packing_Problem_SolverUITests.swift */,
+				AA7F0F631DA553380014722D /* Info.plist */,
+			);
+			path = "Packing Problem SolverUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA7F0F401DA553380014722D /* Packing Problem Solver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA7F0F661DA553380014722D /* Build configuration list for PBXNativeTarget "Packing Problem Solver" */;
+			buildPhases = (
+				AA7F0F3D1DA553380014722D /* Sources */,
+				AA7F0F3E1DA553380014722D /* Frameworks */,
+				AA7F0F3F1DA553380014722D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Packing Problem Solver";
+			productName = "Packing Problem Solver";
+			productReference = AA7F0F411DA553380014722D /* Packing Problem Solver.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AA7F0F511DA553380014722D /* Packing Problem SolverTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA7F0F691DA553380014722D /* Build configuration list for PBXNativeTarget "Packing Problem SolverTests" */;
+			buildPhases = (
+				AA7F0F4E1DA553380014722D /* Sources */,
+				AA7F0F4F1DA553380014722D /* Frameworks */,
+				AA7F0F501DA553380014722D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA7F0F541DA553380014722D /* PBXTargetDependency */,
+			);
+			name = "Packing Problem SolverTests";
+			productName = "Packing Problem SolverTests";
+			productReference = AA7F0F521DA553380014722D /* Packing Problem SolverTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AA7F0F5C1DA553380014722D /* Packing Problem SolverUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA7F0F6C1DA553380014722D /* Build configuration list for PBXNativeTarget "Packing Problem SolverUITests" */;
+			buildPhases = (
+				AA7F0F591DA553380014722D /* Sources */,
+				AA7F0F5A1DA553380014722D /* Frameworks */,
+				AA7F0F5B1DA553380014722D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA7F0F5F1DA553380014722D /* PBXTargetDependency */,
+			);
+			name = "Packing Problem SolverUITests";
+			productName = "Packing Problem SolverUITests";
+			productReference = AA7F0F5D1DA553380014722D /* Packing Problem SolverUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA7F0F391DA553380014722D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Dinesh Harjani";
+				TargetAttributes = {
+					AA7F0F401DA553380014722D = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = E9C554889B;
+						ProvisioningStyle = Automatic;
+					};
+					AA7F0F511DA553380014722D = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = E9C554889B;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AA7F0F401DA553380014722D;
+					};
+					AA7F0F5C1DA553380014722D = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = E9C554889B;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AA7F0F401DA553380014722D;
+					};
+				};
+			};
+			buildConfigurationList = AA7F0F3C1DA553380014722D /* Build configuration list for PBXProject "Packing Problem Solver" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AA7F0F381DA553380014722D;
+			productRefGroup = AA7F0F421DA553380014722D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA7F0F401DA553380014722D /* Packing Problem Solver */,
+				AA7F0F511DA553380014722D /* Packing Problem SolverTests */,
+				AA7F0F5C1DA553380014722D /* Packing Problem SolverUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA7F0F3F1DA553380014722D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA7F0F491DA553380014722D /* Assets.xcassets in Resources */,
+				AA7F0F4C1DA553380014722D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA7F0F501DA553380014722D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA7F0F5B1DA553380014722D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA7F0F3D1DA553380014722D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA7F0F471DA553380014722D /* ViewController.swift in Sources */,
+				AA7F0F451DA553380014722D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA7F0F4E1DA553380014722D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA7F0F571DA553380014722D /* Packing_Problem_SolverTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA7F0F591DA553380014722D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA7F0F621DA553380014722D /* Packing_Problem_SolverUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AA7F0F541DA553380014722D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA7F0F401DA553380014722D /* Packing Problem Solver */;
+			targetProxy = AA7F0F531DA553380014722D /* PBXContainerItemProxy */;
+		};
+		AA7F0F5F1DA553380014722D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA7F0F401DA553380014722D /* Packing Problem Solver */;
+			targetProxy = AA7F0F5E1DA553380014722D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AA7F0F4A1DA553380014722D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA7F0F4B1DA553380014722D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AA7F0F641DA553380014722D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AA7F0F651DA553380014722D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		AA7F0F671DA553380014722D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = E9C554889B;
+				INFOPLIST_FILE = "Packing Problem Solver/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dinesharjani.Packing-Problem-Solver";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		AA7F0F681DA553380014722D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = E9C554889B;
+				INFOPLIST_FILE = "Packing Problem Solver/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dinesharjani.Packing-Problem-Solver";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		AA7F0F6A1DA553380014722D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = E9C554889B;
+				INFOPLIST_FILE = "Packing Problem SolverTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dinesharjani.Packing-Problem-SolverTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Packing Problem Solver.app/Contents/MacOS/Packing Problem Solver";
+			};
+			name = Debug;
+		};
+		AA7F0F6B1DA553380014722D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = E9C554889B;
+				INFOPLIST_FILE = "Packing Problem SolverTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dinesharjani.Packing-Problem-SolverTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Packing Problem Solver.app/Contents/MacOS/Packing Problem Solver";
+			};
+			name = Release;
+		};
+		AA7F0F6D1DA553380014722D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = E9C554889B;
+				INFOPLIST_FILE = "Packing Problem SolverUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dinesharjani.Packing-Problem-SolverUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Packing Problem Solver";
+			};
+			name = Debug;
+		};
+		AA7F0F6E1DA553380014722D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = E9C554889B;
+				INFOPLIST_FILE = "Packing Problem SolverUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dinesharjani.Packing-Problem-SolverUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Packing Problem Solver";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA7F0F3C1DA553380014722D /* Build configuration list for PBXProject "Packing Problem Solver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA7F0F641DA553380014722D /* Debug */,
+				AA7F0F651DA553380014722D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA7F0F661DA553380014722D /* Build configuration list for PBXNativeTarget "Packing Problem Solver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA7F0F671DA553380014722D /* Debug */,
+				AA7F0F681DA553380014722D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AA7F0F691DA553380014722D /* Build configuration list for PBXNativeTarget "Packing Problem SolverTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA7F0F6A1DA553380014722D /* Debug */,
+				AA7F0F6B1DA553380014722D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AA7F0F6C1DA553380014722D /* Build configuration list for PBXNativeTarget "Packing Problem SolverUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA7F0F6D1DA553380014722D /* Debug */,
+				AA7F0F6E1DA553380014722D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA7F0F391DA553380014722D /* Project object */;
+}

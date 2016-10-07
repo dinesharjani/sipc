@@ -19,8 +19,27 @@ class Problem: NSObject {
 	
 	init(filePath: String) throws {
 		
-		// TODO read from a file.
-		self.stripWidth = 0
-		self.rectangles = []
+		do {
+			let textFile = try String(contentsOf: URL(fileURLWithPath: filePath), encoding:String.Encoding.utf8)
+			let lines = textFile.components(separatedBy: NSCharacterSet.newlines)
+		
+			// line 0 has strip width.
+			self.stripWidth = Int(lines[0])!
+			
+			var readRectangles = [Rectangle]()
+			// line 1 is number of rectangles, which we don't need.
+			for i in 2..<lines.count {
+				let rectangleProperties = lines[i].components(separatedBy: NSCharacterSet.whitespaces)
+				readRectangles.append(Rectangle(width: Int(rectangleProperties[0])!, height: Int(rectangleProperties[1])!))
+			}
+			
+			self.rectangles = readRectangles
+		}
+		catch {
+			self.stripWidth = 0
+			self.rectangles = []
+			
+			throw ProblemError.couldNotRead
+		}
 	}
 }

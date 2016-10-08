@@ -10,6 +10,7 @@ import Cocoa
 
 enum ProblemError: Error {
 	case couldNotRead
+	case invalidSolution
 }
 
 class Problem: NSObject {
@@ -27,10 +28,10 @@ class Problem: NSObject {
 			self.stripWidth = Int(lines[0])!
 			
 			var readRectangles = [Rectangle]()
-			// line 1 is number of rectangles, which we don't need.
-			for i in 2..<lines.count {
+			// line 1 is the number of rectangles, which we don't need.
+			for i in 2 ..< lines.count {
 				let rectangleProperties = lines[i].components(separatedBy: NSCharacterSet.whitespaces)
-				readRectangles.append(Rectangle(width: Int(rectangleProperties[0])!, height: Int(rectangleProperties[1])!))
+				readRectangles.append(Rectangle(id: i - 1, width: Int(rectangleProperties[0])!, height: Int(rectangleProperties[1])!))
 			}
 			
 			self.rectangles = readRectangles
@@ -41,5 +42,13 @@ class Problem: NSObject {
 			
 			throw ProblemError.couldNotRead
 		}
+	}
+	
+	public func applySolution(solution: [Int]) throws -> Strip {
+		guard (solution.count == rectangles.count) else {
+			throw ProblemError.invalidSolution
+		}
+		
+		return Strip(width: self.stripWidth)
 	}
 }

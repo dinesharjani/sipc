@@ -20,7 +20,7 @@ class PlacedRectangle: Rectangle {
 	init(rectangle: Rectangle, position: Position) {
 		self.position = position
 		
-		super.init(width: rectangle.width, height: rectangle.height, margin: rectangle.margin)
+		super.init(id: rectangle.id, width: rectangle.width, height: rectangle.height, margin: rectangle.margin)
 	}
 	
 	public func top() -> Int {

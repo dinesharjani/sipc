@@ -41,6 +41,7 @@ class ViewController: NSViewController {
 		
 		do {
 			problem = try Problem(filePath: problemFilePath)
+			let solution = problem!.randomSolution()
 		} catch {
 			
 		}

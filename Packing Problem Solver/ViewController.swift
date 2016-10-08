@@ -12,6 +12,8 @@ class ViewController: NSViewController {
 
 	@IBOutlet weak var problemFilePathField: NSTextField!
 	
+	var problem: Problem?
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,7 +40,7 @@ class ViewController: NSViewController {
 		problemFilePathField?.textColor = NSColor.black
 		
 		do {
-			let _ = try Problem(filePath: problemFilePath)
+			problem = try Problem(filePath: problemFilePath)
 		} catch {
 			
 		}

@@ -24,14 +24,13 @@ class Problem: NSObject {
 			let textFile = try String(contentsOf: URL(fileURLWithPath: filePath), encoding:String.Encoding.utf8)
 			let lines = textFile.components(separatedBy: NSCharacterSet.newlines)
 		
-			// line 0 has strip width.
-			self.stripWidth = Int(lines[0])!
+			let numberOfRectangles = Int(lines[0])!
+			self.stripWidth = Int(lines[1])!
 			
 			var readRectangles = [Rectangle]()
-			// line 1 is the number of rectangles, which we don't need.
-			for i in 2 ..< lines.count {
-				let rectangleProperties = lines[i].components(separatedBy: NSCharacterSet.whitespaces)
-				readRectangles.append(Rectangle(id: i - 1, width: Int(rectangleProperties[0])!, height: Int(rectangleProperties[1])!))
+			for i in 0 ..< numberOfRectangles {
+				let rectangleProperties = lines[i + 2].components(separatedBy: NSCharacterSet.whitespaces)
+				readRectangles.append(Rectangle(id: i + 1, width: Int(rectangleProperties[0])!, height: Int(rectangleProperties[1])!))
 			}
 			
 			self.rectangles = readRectangles

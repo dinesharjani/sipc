@@ -8,15 +8,22 @@
 
 import Cocoa
 
-class PlacedRectangle: Rectangle {
-
+struct Position {
 	let x: Int
 	let y: Int
+}
+
+class PlacedRectangle: Rectangle {
+
+	let position: Position
 	
-	init(rectangle: Rectangle, x: Int, y: Int) {
-		self.x = x
-		self.y = y
+	init(rectangle: Rectangle, position: Position) {
+		self.position = position
 		
 		super.init(width: rectangle.width, height: rectangle.height, margin: rectangle.margin)
+	}
+	
+	public func top() -> Int {
+		return super.height + position.y
 	}
 }

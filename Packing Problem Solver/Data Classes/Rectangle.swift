@@ -18,6 +18,10 @@ class Rectangle: NSObject {
 		self.init(width: 0, height: 0, margin: 0)
 	}
 	
+	convenience init(rectangle: Rectangle) {
+		self.init(width: rectangle.width, height: rectangle.height, margin: rectangle.margin)
+	}
+	
 	init(width: Int, height: Int, margin: Int = 0) {
 		self.width = width
 		self.height = height

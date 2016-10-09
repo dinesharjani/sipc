@@ -31,6 +31,6 @@ class Rectangle: NSObject {
 	}
 	
 	func fitsIn(width: Int, height: Int) -> Bool {
-		return (self.width + margin) <= width && (self.height + margin) <= height;
+		return (self.width + 2 * margin) <= width && (self.height + 2 * margin) <= height;
 	}
 }

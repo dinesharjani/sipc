@@ -60,11 +60,14 @@ class Problem: NSObject {
 		return solution
 	}
 	
-	public func applySolution(solution: [Int]) throws -> Strip {
+	public func applySolution(solution: [Int], placementAlgorithm: PlacementAlgorithm) throws -> Strip {
 		guard (solution.count == rectangles.count) else {
 			throw ProblemError.invalidSolution
 		}
 		
-		return Strip(width: self.stripWidth)
+		let strip = Strip(width: self.stripWidth)
+		placementAlgorithm.placeRectangles(rectangles: rectangles, order: solution, strip: strip)
+		
+		return strip
 	}
 }

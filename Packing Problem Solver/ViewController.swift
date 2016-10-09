@@ -42,6 +42,8 @@ class ViewController: NSViewController {
 		do {
 			problem = try Problem(filePath: problemFilePath)
 			let solution = problem!.randomSolution()
+			let strip = try problem!.applySolution(solution: solution, placementAlgorithm: BottomLeft())
+			
 		} catch {
 			
 		}

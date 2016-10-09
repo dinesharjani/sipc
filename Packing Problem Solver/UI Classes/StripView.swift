@@ -16,7 +16,8 @@ class StripView: NSView {
 		}
 	}
 	
-	let margin = Float(0.1)
+	let widthMargin = Float(0.075)
+	let heightMargin = Float(0.05)
 	
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
@@ -25,16 +26,16 @@ class StripView: NSView {
 			return;
 		}
 		
-		let xOffset = Int(margin * Float(strip!.width))
-		let yOffset = Int(margin * Float(strip!.height))
+		let xOffset = widthMargin * Float(strip!.width)
+		let yOffset = heightMargin * Float(strip!.height)
 		
-		let widthAspectRatio = (Int(dirtyRect.size.width) + 2 * xOffset) / strip!.width
-		let heightAspectRatio = (Int(dirtyRect.size.height) + 2 * yOffset) / strip!.height
+		let widthAspectRatio = (Float(dirtyRect.size.width) - 2 * xOffset) / Float(strip!.width)
+		let heightAspectRatio = (Float(dirtyRect.size.height) - 2 * yOffset) / Float(strip!.height)
 		
-		let xStart = xOffset * widthAspectRatio
-		let xEnd =  strip!.width * widthAspectRatio
-		let yStart = yOffset * heightAspectRatio
-		let yEnd = strip!.height * heightAspectRatio
+		let xStart =  xOffset * widthAspectRatio
+		let xEnd =  Float(strip!.width) * widthAspectRatio - xStart
+		let yStart = heightAspectRatio * yOffset
+		let yEnd = (Float(strip!.height) * heightAspectRatio) - yStart
 		
 		let blackColor = NSColor.black
 		blackColor.set()

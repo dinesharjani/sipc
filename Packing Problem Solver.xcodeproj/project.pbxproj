@@ -13,6 +13,9 @@
 		AA26183B1DAA63EA00AF97C1 /* BottomLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA26183A1DAA63EA00AF97C1 /* BottomLeft.swift */; };
 		AA26183C1DAA63EA00AF97C1 /* BottomLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA26183A1DAA63EA00AF97C1 /* BottomLeft.swift */; };
 		AA26183D1DAA63EA00AF97C1 /* BottomLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA26183A1DAA63EA00AF97C1 /* BottomLeft.swift */; };
+		AA2618401DAA716700AF97C1 /* StripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA26183F1DAA716700AF97C1 /* StripView.swift */; };
+		AA2618411DAA716700AF97C1 /* StripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA26183F1DAA716700AF97C1 /* StripView.swift */; };
+		AA2618421DAA716700AF97C1 /* StripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA26183F1DAA716700AF97C1 /* StripView.swift */; };
 		AA63D3C61DA909BB00A826FD /* PlacedRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA63D3C51DA909BB00A826FD /* PlacedRectangle.swift */; };
 		AA63D3C71DA909BB00A826FD /* PlacedRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA63D3C51DA909BB00A826FD /* PlacedRectangle.swift */; };
 		AA63D3C81DA909BB00A826FD /* PlacedRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA63D3C51DA909BB00A826FD /* PlacedRectangle.swift */; };
@@ -53,6 +56,7 @@
 /* Begin PBXFileReference section */
 		AA2618351DAA630C00AF97C1 /* PlacementAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacementAlgorithm.swift; sourceTree = "<group>"; };
 		AA26183A1DAA63EA00AF97C1 /* BottomLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomLeft.swift; sourceTree = "<group>"; };
+		AA26183F1DAA716700AF97C1 /* StripView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StripView.swift; sourceTree = "<group>"; };
 		AA63D3C51DA909BB00A826FD /* PlacedRectangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacedRectangle.swift; sourceTree = "<group>"; };
 		AA63D3C91DA90C7800A826FD /* Strip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strip.swift; sourceTree = "<group>"; };
 		AA7F0F411DA553380014722D /* Packing Problem Solver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Packing Problem Solver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +110,14 @@
 			path = "../Placement Algorithms";
 			sourceTree = "<group>";
 		};
+		AA26183E1DAA713C00AF97C1 /* UI Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AA26183F1DAA716700AF97C1 /* StripView.swift */,
+			);
+			path = "UI Classes";
+			sourceTree = "<group>";
+		};
 		AA7F0F381DA553380014722D = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				AAA9BA501DA55E640065646E /* Data Classes */,
+				AA26183E1DAA713C00AF97C1 /* UI Classes */,
 				AA7F0F441DA553380014722D /* AppDelegate.swift */,
 				AA7F0F461DA553380014722D /* ViewController.swift */,
 				AA7F0F481DA553380014722D /* Assets.xcassets */,
@@ -307,6 +320,7 @@
 			files = (
 				AAA9BA521DA55EA80065646E /* Rectangle.swift in Sources */,
 				AAA9BA561DA5617A0065646E /* Problem.swift in Sources */,
+				AA2618401DAA716700AF97C1 /* StripView.swift in Sources */,
 				AA63D3CA1DA90C7800A826FD /* Strip.swift in Sources */,
 				AA26183B1DAA63EA00AF97C1 /* BottomLeft.swift in Sources */,
 				AA7F0F471DA553380014722D /* ViewController.swift in Sources */,
@@ -327,6 +341,7 @@
 				AAA9BA531DA55EA80065646E /* Rectangle.swift in Sources */,
 				AA26183C1DAA63EA00AF97C1 /* BottomLeft.swift in Sources */,
 				AA63D3CB1DA90C7800A826FD /* Strip.swift in Sources */,
+				AA2618411DAA716700AF97C1 /* StripView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +356,7 @@
 				AAA9BA541DA55EA80065646E /* Rectangle.swift in Sources */,
 				AA26183D1DAA63EA00AF97C1 /* BottomLeft.swift in Sources */,
 				AA63D3CC1DA90C7800A826FD /* Strip.swift in Sources */,
+				AA2618421DAA716700AF97C1 /* StripView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

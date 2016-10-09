@@ -11,6 +11,7 @@ import Cocoa
 class ViewController: NSViewController {
 
 	@IBOutlet weak var problemFilePathField: NSTextField!
+	@IBOutlet weak var stripView: StripView!
 	
 	var problem: Problem?
 	
@@ -43,7 +44,7 @@ class ViewController: NSViewController {
 			problem = try Problem(filePath: problemFilePath)
 			let solution = problem!.randomSolution()
 			let strip = try problem!.applySolution(solution: solution, placementAlgorithm: BottomLeft())
-			
+			stripView!.strip = strip
 		} catch {
 			
 		}

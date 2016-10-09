@@ -721,19 +721,27 @@
                                     <action selector="browseButtonTappedWithSender:" target="XfG-lQ-9wD" id="SLq-TS-SQh"/>
                                 </connections>
                             </button>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="Lec-0E-1A5" customClass="StripView" customModule="Packing_Problem_Solver" customModuleProvider="target">
+                                <rect key="frame" x="267" y="20" width="193" height="230"/>
+                            </customView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="3My-bu-iCR" firstAttribute="leading" secondItem="Lik-Ue-BhX" secondAttribute="trailing" constant="8" id="7ht-pR-atG"/>
+                            <constraint firstAttribute="bottom" secondItem="Lec-0E-1A5" secondAttribute="bottom" constant="20" id="Jov-5s-Lfd"/>
                             <constraint firstItem="3My-bu-iCR" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="46" id="LAu-U8-3y9"/>
                             <constraint firstItem="Lik-Ue-BhX" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="T7a-yz-Gi5"/>
                             <constraint firstItem="Kbf-2H-oAN" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="UKL-Ir-XNN"/>
                             <constraint firstItem="Lik-Ue-BhX" firstAttribute="top" secondItem="Kbf-2H-oAN" secondAttribute="bottom" constant="8" id="XVn-AZ-pda"/>
+                            <constraint firstItem="Lec-0E-1A5" firstAttribute="leading" secondItem="3My-bu-iCR" secondAttribute="trailing" constant="8" id="Zt6-lw-Mp1"/>
                             <constraint firstItem="Kbf-2H-oAN" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="fNB-ol-thG"/>
                             <constraint firstItem="3My-bu-iCR" firstAttribute="leading" secondItem="Lik-Ue-BhX" secondAttribute="trailing" constant="8" id="jnP-z0-qgF"/>
+                            <constraint firstItem="Lec-0E-1A5" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="mP2-Ai-3OT"/>
+                            <constraint firstAttribute="trailing" secondItem="Lec-0E-1A5" secondAttribute="trailing" constant="20" id="wyn-gN-koY"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="problemFilePathField" destination="Lik-Ue-BhX" id="SHh-P0-oAd"/>
+                        <outlet property="stripView" destination="Lec-0E-1A5" id="bgi-wB-uDw"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

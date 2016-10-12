@@ -12,8 +12,7 @@ class Strip: NSObject {
 
 	let width: Int
 	var height: Int
-	
-	private var placedRectangles: [PlacedRectangle]
+	private(set) public var placedRectangles: [PlacedRectangle]
 	
 	init(width: Int) {
 		self.width = width

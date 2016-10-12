@@ -64,6 +64,9 @@ class StripView: NSView {
 			rectPath.line(to: NSMakePoint(CGFloat(xUpperRightCorner), CGFloat(yUpperRightCorner)))
 			rectPath.line(to: NSMakePoint(CGFloat(xUpperRightCorner), CGFloat(yLowerLeftCorner)))
 			rectPath.line(to: NSMakePoint(CGFloat(xLowerLeftCorner), CGFloat(yLowerLeftCorner)))
+			
+			rectangle.color.setFill()
+			rectPath.fill()
 			rectPath.stroke()
 		}
     }

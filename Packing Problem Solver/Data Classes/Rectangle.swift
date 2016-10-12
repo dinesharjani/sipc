@@ -14,6 +14,7 @@ class Rectangle: NSObject {
 	let width: Int
 	let height: Int
 	let margin: Int
+	let color: NSColor
 	
 	override convenience init() {
 		self.init(id: 0, width: 0, height: 0, margin: 0)
@@ -28,6 +29,16 @@ class Rectangle: NSObject {
 		self.width = width
 		self.height = height
 		self.margin = margin
+		
+		let total = width + height
+		srand48(total * 2000)
+		let r = CGFloat(drand48())
+		srand48(total)
+		let g = CGFloat(drand48())
+		srand48(total / 2000)
+		let b = CGFloat(drand48())
+		
+		self.color = NSColor(red: r, green: g, blue: b, alpha: 1)
 	}
 	
 	func fitsIn(width: Int, height: Int) -> Bool {

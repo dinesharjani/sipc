@@ -29,18 +29,18 @@ class StripView: NSView {
 		let xOffset = widthMargin * Float(strip!.width)
 		let yOffset = heightMargin * Float(strip!.height)
 		
-		let widthAspectRatio = (Float(dirtyRect.size.width) - 2 * xOffset) / Float(strip!.width)
-		let heightAspectRatio = (Float(dirtyRect.size.height) - 2 * yOffset) / Float(strip!.height)
+		let widthAspectRatio = Float(dirtyRect.size.width) / (Float(strip!.width) + 2 * xOffset)
+		let heightAspectRatio = Float(dirtyRect.size.height) / (Float(strip!.height) + 2 * yOffset)
 		
 		let xStart =  xOffset * widthAspectRatio
-		let xEnd =  Float(strip!.width) * widthAspectRatio - xStart
+		let xEnd =  xStart + Float(strip!.width) * widthAspectRatio
 		let yStart = heightAspectRatio * yOffset
-		let yEnd = (Float(strip!.height) * heightAspectRatio) - yStart
+		let yEnd = yStart + (Float(strip!.height) * heightAspectRatio)
 		
 		let blackColor = NSColor.black
-		blackColor.set()
+		blackColor.setStroke()
 		
-		let stripOutlinePath = NSBezierPath(rect: dirtyRect)
+		let stripOutlinePath = NSBezierPath()
 		stripOutlinePath.move(to: NSMakePoint(CGFloat(xStart), CGFloat(yStart)))
 		stripOutlinePath.line(to: NSMakePoint(CGFloat(xStart), CGFloat(yEnd)))
 		stripOutlinePath.move(to: NSMakePoint(CGFloat(xStart), CGFloat(yStart)))
@@ -48,10 +48,25 @@ class StripView: NSView {
 		stripOutlinePath.line(to: NSMakePoint(CGFloat(xEnd), CGFloat(yEnd)))
 		stripOutlinePath.stroke()
 		
+		let stripFillPath = NSBezierPath(rect: NSRect(x: CGFloat(xStart), y: CGFloat(yStart), width: CGFloat(Float(strip!.width) * widthAspectRatio), height: CGFloat((Float(strip!.height) * heightAspectRatio))))
+		NSColor.white.setFill()
+		stripFillPath.fill()
 		
-		let i = 5
-		
-		
+		for rectangle in strip!.placedRectangles {
+			let xLowerLeftCorner = xStart + Float(rectangle.position.x) * widthAspectRatio
+			let yLowerLeftCorner = yStart + Float(rectangle.position.y) * heightAspectRatio
+			let xUpperRightCorner = xLowerLeftCorner + Float(rectangle.width) * widthAspectRatio
+			let yUpperRightCorner = yLowerLeftCorner + Float(rectangle.height) * heightAspectRatio
+			
+			let rectPath = NSBezierPath()
+			rectPath.move(to: NSMakePoint(CGFloat(xLowerLeftCorner), CGFloat(yLowerLeftCorner)))
+			rectPath.line(to: NSMakePoint(CGFloat(xLowerLeftCorner), CGFloat(yUpperRightCorner)))
+			rectPath.line(to: NSMakePoint(CGFloat(xUpperRightCorner), CGFloat(yUpperRightCorner)))
+			rectPath.line(to: NSMakePoint(CGFloat(xUpperRightCorner), CGFloat(yLowerLeftCorner)))
+			rectPath.line(to: NSMakePoint(CGFloat(xLowerLeftCorner), CGFloat(yLowerLeftCorner)))
+			rectPath.stroke()
+		}
     }
-    
+	
+	
 }

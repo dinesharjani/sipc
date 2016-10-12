@@ -30,15 +30,8 @@ class Rectangle: NSObject {
 		self.height = height
 		self.margin = margin
 		
-		let total = width + height
-		srand48(total * 2000)
-		let r = CGFloat(drand48())
-		srand48(total)
-		let g = CGFloat(drand48())
-		srand48(total / 2000)
-		let b = CGFloat(drand48())
-		
-		self.color = NSColor(red: r, green: g, blue: b, alpha: 1)
+		srand48(width + height + id * 1400)
+		self.color = NSColor(red: CGFloat(drand48()), green: CGFloat(drand48()), blue: CGFloat(drand48()), alpha: 1)
 	}
 	
 	func fitsIn(width: Int, height: Int) -> Bool {

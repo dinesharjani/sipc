@@ -9,9 +9,9 @@
 import Cocoa
 
 extension PlacedRectangle {
-	public func draw(xOffset: Float, yOffset: Float, widthAspectRatio: Float, heightAspectRatio: Float) {
-		let xLowerLeftCorner = xOffset + Float(position.x) * widthAspectRatio
-		let yLowerLeftCorner = yOffset + Float(position.y) * heightAspectRatio
+	public func draw(xStart: Float, yStart: Float, widthAspectRatio: Float, heightAspectRatio: Float) {
+		let xLowerLeftCorner = xStart + Float(position.x) * widthAspectRatio
+		let yLowerLeftCorner = yStart + Float(position.y) * heightAspectRatio
 		let xUpperRightCorner = xLowerLeftCorner + Float(width) * widthAspectRatio
 		let yUpperRightCorner = yLowerLeftCorner + Float(height) * heightAspectRatio
 		
@@ -25,6 +25,28 @@ extension PlacedRectangle {
 		color.setFill()
 		path.fill()
 		path.stroke()
+	}
+}
+
+extension Strip {
+	public func draw(xStart: Float, yStart: Float, widthAspectRatio: Float, heightAspectRatio: Float) {
+		let stripWidthInPx = Float(width) * widthAspectRatio
+		let stripHeightInPx = Float(height) * heightAspectRatio
+		
+		let xEnd =  xStart + stripWidthInPx
+		let yEnd = yStart + stripHeightInPx
+		
+		let stripOutlinePath = NSBezierPath()
+		stripOutlinePath.move(to: NSMakePoint(CGFloat(xStart), CGFloat(yStart)))
+		stripOutlinePath.line(to: NSMakePoint(CGFloat(xStart), CGFloat(yEnd)))
+		stripOutlinePath.move(to: NSMakePoint(CGFloat(xStart), CGFloat(yStart)))
+		stripOutlinePath.line(to: NSMakePoint(CGFloat(xEnd), CGFloat(yStart)))
+		stripOutlinePath.line(to: NSMakePoint(CGFloat(xEnd), CGFloat(yEnd)))
+		stripOutlinePath.stroke()
+		
+		let stripFillPath = NSBezierPath(rect: NSRect(x: CGFloat(xStart), y: CGFloat(yStart), width: CGFloat(stripWidthInPx), height: CGFloat(stripHeightInPx)))
+		NSColor.white.setFill()
+		stripFillPath.fill()
 	}
 }
 
@@ -52,32 +74,16 @@ class StripView: NSView {
 		let widthAspectRatio = Float(dirtyRect.size.width) / (Float(strip!.width) + 2 * xOffset)
 		let heightAspectRatio = Float(dirtyRect.size.height) / (Float(strip!.height) + 2 * yOffset)
 		
-		let stripWidthInPx = Float(strip!.width) * widthAspectRatio
-		let stripHeightInPx = (Float(strip!.height) * heightAspectRatio)
-		
 		let xStart =  xOffset * widthAspectRatio
 		let yStart = heightAspectRatio * yOffset
-		
-		let xEnd =  xStart + stripWidthInPx
-		let yEnd = yStart + stripHeightInPx
 		
 		let blackColor = NSColor.black
 		blackColor.setStroke()
 		
-		let stripOutlinePath = NSBezierPath()
-		stripOutlinePath.move(to: NSMakePoint(CGFloat(xStart), CGFloat(yStart)))
-		stripOutlinePath.line(to: NSMakePoint(CGFloat(xStart), CGFloat(yEnd)))
-		stripOutlinePath.move(to: NSMakePoint(CGFloat(xStart), CGFloat(yStart)))
-		stripOutlinePath.line(to: NSMakePoint(CGFloat(xEnd), CGFloat(yStart)))
-		stripOutlinePath.line(to: NSMakePoint(CGFloat(xEnd), CGFloat(yEnd)))
-		stripOutlinePath.stroke()
-		
-		let stripFillPath = NSBezierPath(rect: NSRect(x: CGFloat(xStart), y: CGFloat(yStart), width: CGFloat(stripWidthInPx), height: CGFloat(stripHeightInPx)))
-		NSColor.white.setFill()
-		stripFillPath.fill()
+		strip!.draw(xStart: xStart, yStart: yStart, widthAspectRatio: widthAspectRatio, heightAspectRatio: heightAspectRatio)
 		
 		for rectangle in strip!.placedRectangles {
-			rectangle.draw(xOffset: xStart, yOffset: yStart, widthAspectRatio: widthAspectRatio, heightAspectRatio: heightAspectRatio)
+			rectangle.draw(xStart: xStart, yStart: yStart, widthAspectRatio: widthAspectRatio, heightAspectRatio: heightAspectRatio)
 		}
     }
 	

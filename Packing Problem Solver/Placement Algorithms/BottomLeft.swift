@@ -27,14 +27,15 @@ class BottomLeft: PlacementAlgorithm {
 				let rectangle = rectanglesToPlace[i]
 				
 				if (rectangle.fitsIn(width: availableWidth, height: shelfHeight)) {
-					strip.placeRectangle(rectangle: rectangle, position: Position(x: x, y: y))
+					if (shelfHeight == INF) {
+						shelfHeight = rectangle.height
+					}
+					
+					strip.placeRectangle(rectangle: rectangle, position: Position(x: x, y: y), shelfHeight: shelfHeight)
 					rectanglesToPlace.remove(at: i)
 					
 					x += rectangle.width
 					availableWidth -= rectangle.width
-					if (shelfHeight == INF) {
-						shelfHeight = rectangle.height
-					}
 				} else {
 					i += 1
 				}

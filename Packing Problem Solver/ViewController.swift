@@ -45,8 +45,10 @@ class ViewController: NSViewController {
 			let solution = problem!.randomSolution()
 			let strip = try problem!.applySolution(solution: solution, placementAlgorithm: BottomLeft())
 			stripView!.strip = strip
-		} catch {
 			
+			print(strip.unusedAreaPercentage())
+		} catch {
+			// TODO
 		}
 	}
 }

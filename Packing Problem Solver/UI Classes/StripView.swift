@@ -52,7 +52,7 @@ extension Strip {
 
 class StripView: NSView {
 
-	weak var strip: Strip? {
+	var strip: Strip? {
 		didSet {
 			display()
 		}
@@ -86,6 +86,4 @@ class StripView: NSView {
 			rectangle.draw(xStart: xStart, yStart: yStart, widthAspectRatio: widthAspectRatio, heightAspectRatio: heightAspectRatio)
 		}
     }
-	
-	
 }

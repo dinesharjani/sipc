@@ -682,11 +682,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Packing_Problem_Solver" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="506" height="375"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Kbf-2H-oAN">
-                                <rect key="frame" x="18" y="233" width="114" height="17"/>
+                                <rect key="frame" x="18" y="338" width="114" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="tmY-5g-tnl"/>
                                 </constraints>
@@ -697,7 +697,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Lik-Ue-BhX">
-                                <rect key="frame" x="20" y="203" width="156" height="22"/>
+                                <rect key="frame" x="20" y="308" width="156" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="156" id="w1b-iD-bb7"/>
                                 </constraints>
@@ -708,7 +708,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3My-bu-iCR">
-                                <rect key="frame" x="178" y="196" width="87" height="32"/>
+                                <rect key="frame" x="178" y="301" width="87" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="Rx6-3J-MLi"/>
                                     <constraint firstAttribute="height" constant="21" id="YvB-4q-wSs"/>
@@ -722,31 +722,75 @@
                                 </connections>
                             </button>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="Lec-0E-1A5" customClass="StripView" customModule="Packing_Problem_Solver" customModuleProvider="target">
-                                <rect key="frame" x="267" y="20" width="193" height="230"/>
+                                <rect key="frame" x="267" y="95" width="219" height="260"/>
                             </customView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RfA-sJ-L1k">
+                                <rect key="frame" x="265" y="70" width="223" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="QDh-SF-PcZ"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Solution:" id="Cx1-Qd-T0u">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WkY-5b-Cfn">
+                                <rect key="frame" x="265" y="45" width="223" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="kGl-9S-0bQ"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Height: " id="uhq-ac-nA8">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DgX-KN-0Yx">
+                                <rect key="frame" x="265" y="20" width="223" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="oCr-f0-jp3"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Unused Area: " id="hza-X5-A9F">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="3My-bu-iCR" firstAttribute="leading" secondItem="Lik-Ue-BhX" secondAttribute="trailing" constant="8" id="7ht-pR-atG"/>
-                            <constraint firstAttribute="bottom" secondItem="Lec-0E-1A5" secondAttribute="bottom" constant="20" id="Jov-5s-Lfd"/>
+                            <constraint firstAttribute="trailing" secondItem="RfA-sJ-L1k" secondAttribute="trailing" constant="20" id="81K-Vj-efU"/>
+                            <constraint firstItem="RfA-sJ-L1k" firstAttribute="top" secondItem="Lec-0E-1A5" secondAttribute="bottom" constant="8" id="BIc-dU-JPJ"/>
+                            <constraint firstItem="WkY-5b-Cfn" firstAttribute="top" secondItem="RfA-sJ-L1k" secondAttribute="bottom" constant="8" id="BaY-nf-BQT"/>
+                            <constraint firstItem="DgX-KN-0Yx" firstAttribute="top" secondItem="WkY-5b-Cfn" secondAttribute="bottom" constant="8" id="KAz-Fi-eHC"/>
                             <constraint firstItem="3My-bu-iCR" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="46" id="LAu-U8-3y9"/>
                             <constraint firstItem="Lik-Ue-BhX" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="T7a-yz-Gi5"/>
                             <constraint firstItem="Kbf-2H-oAN" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="UKL-Ir-XNN"/>
                             <constraint firstItem="Lik-Ue-BhX" firstAttribute="top" secondItem="Kbf-2H-oAN" secondAttribute="bottom" constant="8" id="XVn-AZ-pda"/>
+                            <constraint firstAttribute="bottom" secondItem="DgX-KN-0Yx" secondAttribute="bottom" constant="20" symbolic="YES" id="Ymi-je-iO1"/>
                             <constraint firstItem="Lec-0E-1A5" firstAttribute="leading" secondItem="3My-bu-iCR" secondAttribute="trailing" constant="8" id="Zt6-lw-Mp1"/>
+                            <constraint firstItem="Lec-0E-1A5" firstAttribute="leading" secondItem="RfA-sJ-L1k" secondAttribute="leading" id="byk-Jn-2mR"/>
+                            <constraint firstItem="WkY-5b-Cfn" firstAttribute="leading" secondItem="DgX-KN-0Yx" secondAttribute="leading" id="f7B-2c-uCS"/>
                             <constraint firstItem="Kbf-2H-oAN" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="fNB-ol-thG"/>
+                            <constraint firstItem="WkY-5b-Cfn" firstAttribute="leading" secondItem="RfA-sJ-L1k" secondAttribute="leading" id="fuV-04-1Zr"/>
                             <constraint firstItem="3My-bu-iCR" firstAttribute="leading" secondItem="Lik-Ue-BhX" secondAttribute="trailing" constant="8" id="jnP-z0-qgF"/>
+                            <constraint firstAttribute="trailing" secondItem="DgX-KN-0Yx" secondAttribute="trailing" constant="20" id="mBO-Ll-aQa"/>
                             <constraint firstItem="Lec-0E-1A5" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="mP2-Ai-3OT"/>
+                            <constraint firstAttribute="trailing" secondItem="WkY-5b-Cfn" secondAttribute="trailing" constant="20" id="tcv-0W-87o"/>
                             <constraint firstAttribute="trailing" secondItem="Lec-0E-1A5" secondAttribute="trailing" constant="20" id="wyn-gN-koY"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="problemFilePathField" destination="Lik-Ue-BhX" id="SHh-P0-oAd"/>
+                        <outlet property="solutionHeightField" destination="WkY-5b-Cfn" id="nRS-5h-jSL"/>
+                        <outlet property="solutionUnusedAreaField" destination="DgX-KN-0Yx" id="YHu-9M-IJN"/>
                         <outlet property="stripView" destination="Lec-0E-1A5" id="bgi-wB-uDw"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="88" y="707.5"/>
         </scene>
     </scenes>
 </document>

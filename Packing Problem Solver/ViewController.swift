@@ -12,6 +12,8 @@ class ViewController: NSViewController {
 
 	@IBOutlet weak var problemFilePathField: NSTextField!
 	@IBOutlet weak var stripView: StripView!
+	@IBOutlet weak var solutionHeightField: NSTextField!
+	@IBOutlet weak var solutionUnusedAreaField: NSTextField!
 	
 	var problem: Problem?
 	
@@ -46,7 +48,8 @@ class ViewController: NSViewController {
 			let strip = try problem!.applySolution(solution: solution, placementAlgorithm: BottomLeft())
 			stripView!.strip = strip
 			
-			print(strip.unusedAreaPercentage())
+			solutionHeightField?.stringValue = "Height: \(strip.height)"
+			solutionUnusedAreaField?.stringValue = String(format: "Unused Area: %.2f%%", strip.unusedAreaPercentage())
 		} catch {
 			// TODO
 		}

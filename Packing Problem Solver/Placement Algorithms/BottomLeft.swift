@@ -43,6 +43,7 @@ class BottomLeft: PlacementAlgorithm {
 			
 			// Move to next shelf.
 			y += shelfHeight
+			strip.addShelf(shelfHeight: y)
 		}
 	}
 }

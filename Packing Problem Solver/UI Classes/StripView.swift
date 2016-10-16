@@ -10,6 +10,8 @@ import Cocoa
 
 extension PlacedRectangle {
 	public func draw(xStart: Float, yStart: Float, widthAspectRatio: Float, heightAspectRatio: Float) {
+		NSColor.black.setStroke()
+		
 		let xLowerLeftCorner = xStart + Float(position.x) * widthAspectRatio
 		let yLowerLeftCorner = yStart + Float(position.y) * heightAspectRatio
 		let xUpperRightCorner = xLowerLeftCorner + Float(width) * widthAspectRatio
@@ -36,6 +38,7 @@ extension Strip {
 		let xEnd =  xStart + stripWidthInPx
 		let yEnd = yStart + stripHeightInPx
 		
+		NSColor.black.setStroke()
 		let stripOutlinePath = NSBezierPath()
 		stripOutlinePath.move(to: NSMakePoint(CGFloat(xStart), CGFloat(yStart)))
 		stripOutlinePath.line(to: NSMakePoint(CGFloat(xStart), CGFloat(yEnd)))
@@ -47,6 +50,19 @@ extension Strip {
 		let stripFillPath = NSBezierPath(rect: NSRect(x: CGFloat(xStart), y: CGFloat(yStart), width: CGFloat(stripWidthInPx), height: CGFloat(stripHeightInPx)))
 		NSColor.white.setFill()
 		stripFillPath.fill()
+		
+		NSColor.blue.setStroke()
+		let dashes: [CGFloat] = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+		for shelf in shelves {
+			let yShelf = yStart + Float(shelf) * heightAspectRatio
+			
+			let shelfDashedPath = NSBezierPath()
+			shelfDashedPath.move(to: NSMakePoint(0.0, CGFloat(yShelf)))
+			shelfDashedPath.line(to: NSMakePoint(CGFloat(xEnd + xStart), CGFloat(yShelf)))
+			shelfDashedPath.setLineDash(dashes, count: dashes.count, phase: 0.0)
+			shelfDashedPath.lineCapStyle = .buttLineCapStyle
+			shelfDashedPath.stroke()
+		}
 	}
 }
 
@@ -76,9 +92,6 @@ class StripView: NSView {
 		
 		let xStart =  xOffset * widthAspectRatio
 		let yStart = heightAspectRatio * yOffset
-		
-		let blackColor = NSColor.black
-		blackColor.setStroke()
 		
 		strip!.draw(xStart: xStart, yStart: yStart, widthAspectRatio: widthAspectRatio, heightAspectRatio: heightAspectRatio)
 		

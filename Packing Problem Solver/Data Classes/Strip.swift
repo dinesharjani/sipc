@@ -14,12 +14,15 @@ class Strip: NSObject {
 	var height: Int
 	
 	private (set) public var placedRectangles: [PlacedRectangle]
+	private (set) public var shelves: [Int]
 	private var emptySpaces: [Rectangle]
 	
 	init(width: Int) {
 		self.width = width
 		self.height = 0
 		self.placedRectangles = [PlacedRectangle]()
+		self.shelves = [Int]()
+		self.shelves.append(0)
 		self.emptySpaces = [Rectangle]()
 	}
 	
@@ -32,6 +35,10 @@ class Strip: NSObject {
 		} else if (newRect.height < shelfHeight) {
 			emptySpaces.append(Rectangle(id: emptySpaces.count, width: newRect.width, height: shelfHeight - newRect.height))
 		}
+	}
+	
+	func addShelf(shelfHeight: Int) {
+		shelves.append(shelfHeight)
 	}
 	
 	func unusedAreaPercentage() -> Float {

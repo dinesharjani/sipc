@@ -8,10 +8,10 @@
 
 import Cocoa
 
-class Strip: NSObject {
+class Strip: NSObject, RectangleContainer {
 
 	let width: Int
-	var height: Int
+	private (set) public var height: Int
 	
 	private (set) public var placedRectangles: [PlacedRectangle]
 	private (set) public var shelves: [Int]

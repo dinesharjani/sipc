@@ -45,7 +45,7 @@ class ViewController: NSViewController {
 		do {
 			problem = try Problem(filePath: problemFilePath)
 			let solution = problem!.randomSolution()
-			let strip = try problem!.applySolution(solution: solution, placementAlgorithm: BottomLeft())
+			let strip = try problem!.applySolution(solution: solution, placementAlgorithm: NextFit())
 			containerView!.container = strip
 			
 			solutionHeightField?.stringValue = "Height: \(strip.height)"

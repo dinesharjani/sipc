@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class BottomLeft: PlacementAlgorithm {
+class NextFit: PlacementAlgorithm {
 
 	let INF = Int.max
 	

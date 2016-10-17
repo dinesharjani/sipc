@@ -31,7 +31,10 @@ class BottomLeft: PlacementAlgorithm {
 						shelfHeight = rectangle.height
 					}
 					
-					strip.placeRectangle(rectangle: rectangle, position: Position(x: x, y: y), shelfHeight: shelfHeight)
+					strip.placeRectangle(rectangle: rectangle, position: Position(x: x, y: y))
+					if (rectangle.height < shelfHeight) {
+						strip.addEmptySpace(width: rectangle.width, height: shelfHeight - rectangle.height)
+					}
 					rectanglesToPlace.remove(at: i)
 					
 					x += rectangle.width
@@ -44,6 +47,10 @@ class BottomLeft: PlacementAlgorithm {
 			// Move to next shelf.
 			y += shelfHeight
 			strip.addShelf(shelfHeight: y)
+			
+			if (availableWidth > 0) {
+				strip.addEmptySpace(width: availableWidth, height: shelfHeight)
+			}
 		}
 	}
 }

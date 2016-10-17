@@ -26,15 +26,17 @@ class Strip: NSObject {
 		self.emptySpaces = [Rectangle]()
 	}
 	
-	func placeRectangle(rectangle: Rectangle, position: Position, shelfHeight: Int) {
+	func placeRectangle(rectangle: Rectangle, position: Position) {
 		let newRect = PlacedRectangle(rectangle: rectangle, position: position)
 		placedRectangles.append(newRect)
 		
 		if (newRect.top() > self.height) {
 			self.height = newRect.top()
-		} else if (newRect.height < shelfHeight) {
-			emptySpaces.append(Rectangle(id: emptySpaces.count, width: newRect.width, height: shelfHeight - newRect.height))
 		}
+	}
+	
+	func addEmptySpace(width: Int, height: Int) {
+		emptySpaces.append(Rectangle(id: emptySpaces.count, width: width, height: height))
 	}
 	
 	func addShelf(shelfHeight: Int) {

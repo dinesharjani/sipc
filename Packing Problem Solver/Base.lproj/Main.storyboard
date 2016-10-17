@@ -721,7 +721,7 @@
                                     <action selector="browseButtonTappedWithSender:" target="XfG-lQ-9wD" id="SLq-TS-SQh"/>
                                 </connections>
                             </button>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="Lec-0E-1A5" customClass="StripView" customModule="Packing_Problem_Solver" customModuleProvider="target">
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="Lec-0E-1A5" customClass="RectangleContainerView" customModule="Packing_Problem_Solver" customModuleProvider="target">
                                 <rect key="frame" x="267" y="95" width="219" height="260"/>
                             </customView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RfA-sJ-L1k">
@@ -782,10 +782,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="containerView" destination="Lec-0E-1A5" id="R3a-p2-oak"/>
                         <outlet property="problemFilePathField" destination="Lik-Ue-BhX" id="SHh-P0-oAd"/>
                         <outlet property="solutionHeightField" destination="WkY-5b-Cfn" id="nRS-5h-jSL"/>
                         <outlet property="solutionUnusedAreaField" destination="DgX-KN-0Yx" id="YHu-9M-IJN"/>
-                        <outlet property="stripView" destination="Lec-0E-1A5" id="bgi-wB-uDw"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

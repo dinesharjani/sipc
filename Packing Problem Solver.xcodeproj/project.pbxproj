@@ -16,9 +16,9 @@
 		AA26183B1DAA63EA00AF97C1 /* BottomLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA26183A1DAA63EA00AF97C1 /* BottomLeft.swift */; };
 		AA26183C1DAA63EA00AF97C1 /* BottomLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA26183A1DAA63EA00AF97C1 /* BottomLeft.swift */; };
 		AA26183D1DAA63EA00AF97C1 /* BottomLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA26183A1DAA63EA00AF97C1 /* BottomLeft.swift */; };
-		AA2618401DAA716700AF97C1 /* StripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA26183F1DAA716700AF97C1 /* StripView.swift */; };
-		AA2618411DAA716700AF97C1 /* StripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA26183F1DAA716700AF97C1 /* StripView.swift */; };
-		AA2618421DAA716700AF97C1 /* StripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA26183F1DAA716700AF97C1 /* StripView.swift */; };
+		AA2618401DAA716700AF97C1 /* RectangleContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA26183F1DAA716700AF97C1 /* RectangleContainerView.swift */; };
+		AA2618411DAA716700AF97C1 /* RectangleContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA26183F1DAA716700AF97C1 /* RectangleContainerView.swift */; };
+		AA2618421DAA716700AF97C1 /* RectangleContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA26183F1DAA716700AF97C1 /* RectangleContainerView.swift */; };
 		AA63D3C61DA909BB00A826FD /* PlacedRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA63D3C51DA909BB00A826FD /* PlacedRectangle.swift */; };
 		AA63D3C71DA909BB00A826FD /* PlacedRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA63D3C51DA909BB00A826FD /* PlacedRectangle.swift */; };
 		AA63D3C81DA909BB00A826FD /* PlacedRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA63D3C51DA909BB00A826FD /* PlacedRectangle.swift */; };
@@ -60,7 +60,7 @@
 		AA1E97AE1DB4EA3A008D4743 /* RectangleContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangleContainer.swift; sourceTree = "<group>"; };
 		AA2618351DAA630C00AF97C1 /* PlacementAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacementAlgorithm.swift; sourceTree = "<group>"; };
 		AA26183A1DAA63EA00AF97C1 /* BottomLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomLeft.swift; sourceTree = "<group>"; };
-		AA26183F1DAA716700AF97C1 /* StripView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StripView.swift; sourceTree = "<group>"; };
+		AA26183F1DAA716700AF97C1 /* RectangleContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangleContainerView.swift; sourceTree = "<group>"; };
 		AA63D3C51DA909BB00A826FD /* PlacedRectangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacedRectangle.swift; sourceTree = "<group>"; };
 		AA63D3C91DA90C7800A826FD /* Strip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strip.swift; sourceTree = "<group>"; };
 		AA7F0F411DA553380014722D /* Packing Problem Solver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Packing Problem Solver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,7 +117,7 @@
 		AA26183E1DAA713C00AF97C1 /* UI Classes */ = {
 			isa = PBXGroup;
 			children = (
-				AA26183F1DAA716700AF97C1 /* StripView.swift */,
+				AA26183F1DAA716700AF97C1 /* RectangleContainerView.swift */,
 			);
 			path = "UI Classes";
 			sourceTree = "<group>";
@@ -325,7 +325,7 @@
 			files = (
 				AAA9BA521DA55EA80065646E /* Rectangle.swift in Sources */,
 				AAA9BA561DA5617A0065646E /* Problem.swift in Sources */,
-				AA2618401DAA716700AF97C1 /* StripView.swift in Sources */,
+				AA2618401DAA716700AF97C1 /* RectangleContainerView.swift in Sources */,
 				AA63D3CA1DA90C7800A826FD /* Strip.swift in Sources */,
 				AA26183B1DAA63EA00AF97C1 /* BottomLeft.swift in Sources */,
 				AA7F0F471DA553380014722D /* ViewController.swift in Sources */,
@@ -348,7 +348,7 @@
 				AAA9BA531DA55EA80065646E /* Rectangle.swift in Sources */,
 				AA26183C1DAA63EA00AF97C1 /* BottomLeft.swift in Sources */,
 				AA63D3CB1DA90C7800A826FD /* Strip.swift in Sources */,
-				AA2618411DAA716700AF97C1 /* StripView.swift in Sources */,
+				AA2618411DAA716700AF97C1 /* RectangleContainerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,7 +364,7 @@
 				AAA9BA541DA55EA80065646E /* Rectangle.swift in Sources */,
 				AA26183D1DAA63EA00AF97C1 /* BottomLeft.swift in Sources */,
 				AA63D3CC1DA90C7800A826FD /* Strip.swift in Sources */,
-				AA2618421DAA716700AF97C1 /* StripView.swift in Sources */,
+				AA2618421DAA716700AF97C1 /* RectangleContainerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

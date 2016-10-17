@@ -11,7 +11,7 @@ import Cocoa
 class ViewController: NSViewController {
 
 	@IBOutlet weak var problemFilePathField: NSTextField!
-	@IBOutlet weak var stripView: StripView!
+	@IBOutlet weak var containerView: RectangleContainerView!
 	@IBOutlet weak var solutionHeightField: NSTextField!
 	@IBOutlet weak var solutionUnusedAreaField: NSTextField!
 	
@@ -46,7 +46,7 @@ class ViewController: NSViewController {
 			problem = try Problem(filePath: problemFilePath)
 			let solution = problem!.randomSolution()
 			let strip = try problem!.applySolution(solution: solution, placementAlgorithm: BottomLeft())
-			stripView!.container = strip
+			containerView!.container = strip
 			
 			solutionHeightField?.stringValue = "Height: \(strip.height)"
 			solutionUnusedAreaField?.stringValue = String(format: "Unused Area: %.2f%%", strip.unusedAreaPercentage())

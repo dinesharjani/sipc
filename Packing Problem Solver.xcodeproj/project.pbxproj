@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AA1E97AF1DB4EA3A008D4743 /* RectangleContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1E97AE1DB4EA3A008D4743 /* RectangleContainer.swift */; };
-		AA1E97B01DB4EA3A008D4743 /* RectangleContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1E97AE1DB4EA3A008D4743 /* RectangleContainer.swift */; };
-		AA1E97B11DB4EA3A008D4743 /* RectangleContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1E97AE1DB4EA3A008D4743 /* RectangleContainer.swift */; };
 		AA2618361DAA630C00AF97C1 /* PlacementAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2618351DAA630C00AF97C1 /* PlacementAlgorithm.swift */; };
 		AA2618371DAA630C00AF97C1 /* PlacementAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2618351DAA630C00AF97C1 /* PlacementAlgorithm.swift */; };
 		AA2618381DAA630C00AF97C1 /* PlacementAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2618351DAA630C00AF97C1 /* PlacementAlgorithm.swift */; };
@@ -57,7 +54,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AA1E97AE1DB4EA3A008D4743 /* RectangleContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangleContainer.swift; sourceTree = "<group>"; };
 		AA2618351DAA630C00AF97C1 /* PlacementAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacementAlgorithm.swift; sourceTree = "<group>"; };
 		AA26183A1DAA63EA00AF97C1 /* NextFit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextFit.swift; sourceTree = "<group>"; };
 		AA26183F1DAA716700AF97C1 /* RectangleContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangleContainerView.swift; sourceTree = "<group>"; };
@@ -182,7 +178,6 @@
 				AA63D3C51DA909BB00A826FD /* PlacedRectangle.swift */,
 				AAA9BA551DA5617A0065646E /* Problem.swift */,
 				AA63D3C91DA90C7800A826FD /* Strip.swift */,
-				AA1E97AE1DB4EA3A008D4743 /* RectangleContainer.swift */,
 			);
 			path = "Data Classes";
 			sourceTree = "<group>";
@@ -332,7 +327,6 @@
 				AA63D3C61DA909BB00A826FD /* PlacedRectangle.swift in Sources */,
 				AA7F0F451DA553380014722D /* AppDelegate.swift in Sources */,
 				AA2618361DAA630C00AF97C1 /* PlacementAlgorithm.swift in Sources */,
-				AA1E97AF1DB4EA3A008D4743 /* RectangleContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,7 +336,6 @@
 			files = (
 				AA7F0F571DA553380014722D /* Packing_Problem_SolverTests.swift in Sources */,
 				AA2618371DAA630C00AF97C1 /* PlacementAlgorithm.swift in Sources */,
-				AA1E97B01DB4EA3A008D4743 /* RectangleContainer.swift in Sources */,
 				AAA9BA571DA5617A0065646E /* Problem.swift in Sources */,
 				AA63D3C71DA909BB00A826FD /* PlacedRectangle.swift in Sources */,
 				AAA9BA531DA55EA80065646E /* Rectangle.swift in Sources */,
@@ -358,7 +351,6 @@
 			files = (
 				AA7F0F621DA553380014722D /* Packing_Problem_SolverUITests.swift in Sources */,
 				AA2618381DAA630C00AF97C1 /* PlacementAlgorithm.swift in Sources */,
-				AA1E97B11DB4EA3A008D4743 /* RectangleContainer.swift in Sources */,
 				AAA9BA581DA5617A0065646E /* Problem.swift in Sources */,
 				AA63D3C81DA909BB00A826FD /* PlacedRectangle.swift in Sources */,
 				AAA9BA541DA55EA80065646E /* Rectangle.swift in Sources */,

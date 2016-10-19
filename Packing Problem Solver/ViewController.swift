@@ -46,7 +46,7 @@ class ViewController: NSViewController {
 			problem = try Problem(filePath: problemFilePath)
 			let solution = problem!.randomSolution()
 			let strip = try problem!.applySolution(solution: solution, placementAlgorithm: NextFit())
-			containerView!.container = strip
+			containerView!.strip = strip
 			
 			solutionHeightField?.stringValue = "Height: \(strip.height)"
 			solutionUnusedAreaField?.stringValue = String(format: "Unused Area: %.2f%%", strip.unusedAreaPercentage())

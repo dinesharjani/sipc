@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class Strip: NSObject, RectangleContainer {
+class Strip: NSObject {
 
 	let width: Int
 	private (set) public var height: Int

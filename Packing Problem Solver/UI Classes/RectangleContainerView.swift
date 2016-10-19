@@ -30,7 +30,7 @@ extension PlacedRectangle {
 	}
 }
 
-extension RectangleContainer {
+extension Strip {
 	public func draw(xStart: Float, yStart: Float, widthAspectRatio: Float, heightAspectRatio: Float) {
 		let stripWidthInPx = Float(width) * widthAspectRatio
 		let stripHeightInPx = Float(height) * heightAspectRatio
@@ -68,7 +68,7 @@ extension RectangleContainer {
 
 class RectangleContainerView: NSView {
 
-	var container: RectangleContainer? {
+	var strip: Strip? {
 		didSet {
 			display()
 		}
@@ -80,22 +80,22 @@ class RectangleContainerView: NSView {
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
 
-		guard (container != nil) else {
+		guard (strip != nil) else {
 			return;
 		}
 		
-		let xOffset = widthMargin * Float(container!.width)
-		let yOffset = heightMargin * Float(container!.height)
+		let xOffset = widthMargin * Float(strip!.width)
+		let yOffset = heightMargin * Float(strip!.height)
 		
-		let widthAspectRatio = Float(dirtyRect.size.width) / (Float(container!.width) + 2 * xOffset)
-		let heightAspectRatio = Float(dirtyRect.size.height) / (Float(container!.height) + 2 * yOffset)
+		let widthAspectRatio = Float(dirtyRect.size.width) / (Float(strip!.width) + 2 * xOffset)
+		let heightAspectRatio = Float(dirtyRect.size.height) / (Float(strip!.height) + 2 * yOffset)
 		
 		let xStart =  xOffset * widthAspectRatio
 		let yStart = heightAspectRatio * yOffset
 		
-		container!.draw(xStart: xStart, yStart: yStart, widthAspectRatio: widthAspectRatio, heightAspectRatio: heightAspectRatio)
+		strip!.draw(xStart: xStart, yStart: yStart, widthAspectRatio: widthAspectRatio, heightAspectRatio: heightAspectRatio)
 		
-		for rectangle in container!.placedRectangles {
+		for rectangle in strip!.placedRectangles {
 			rectangle.draw(xStart: xStart, yStart: yStart, widthAspectRatio: widthAspectRatio, heightAspectRatio: heightAspectRatio)
 		}
     }

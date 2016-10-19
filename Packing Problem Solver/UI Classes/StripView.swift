@@ -66,7 +66,7 @@ extension Strip {
 	}
 }
 
-class RectangleContainerView: NSView {
+class StripView: NSView {
 
 	var strip: Strip? {
 		didSet {

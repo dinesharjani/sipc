@@ -16,6 +16,7 @@ enum ProblemError: Error {
 class Problem: NSObject {
 
 	let stripWidth: Int
+	let stripType: StripType
 	let rectangles: [Rectangle]
 	
 	init(filePath: String) throws {
@@ -27,10 +28,23 @@ class Problem: NSObject {
 			let numberOfRectangles = Int(lines[0])!
 			self.stripWidth = Int(lines[1])!
 			
+			if (lines[2].components(separatedBy: NSCharacterSet.whitespaces).count == 1) {
+				stripType = .BinPackingProblem
+			} else {
+				stripType = .StripPackingProblem
+			}
+			
 			var readRectangles = [Rectangle]()
 			for i in 0 ..< numberOfRectangles {
 				let rectangleProperties = lines[i + 2].components(separatedBy: NSCharacterSet.whitespaces)
-				readRectangles.append(Rectangle(id: i + 1, width: Int(rectangleProperties[0])!, height: Int(rectangleProperties[1])!))
+				
+				if (stripType == .BinPackingProblem) {
+					// BPP - width is same as the bin's width, and height is given for each rectangle.
+					readRectangles.append(Rectangle(id: i + 1, width: stripWidth, height: Int(rectangleProperties[0])!))
+				} else {
+					// SPP - both width and height for every rectangle are given.
+					readRectangles.append(Rectangle(id: i + 1, width: Int(rectangleProperties[0])!, height: Int(rectangleProperties[1])!))
+				}
 			}
 			
 			self.rectangles = readRectangles

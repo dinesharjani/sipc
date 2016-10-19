@@ -8,6 +8,11 @@
 
 import Cocoa
 
+enum StripType {
+	case BinPackingProblem
+	case StripPackingProblem
+}
+
 class Strip: NSObject {
 
 	let width: Int

@@ -16,6 +16,8 @@ enum ProblemError: Error {
 class Problem: NSObject {
 
 	let stripWidth: Int
+	let binWidth: Int
+	let binHeight: Int
 	let stripType: StripType
 	let rectangles: [Rectangle]
 	
@@ -23,15 +25,23 @@ class Problem: NSObject {
 		
 		do {
 			let textFile = try String(contentsOf: URL(fileURLWithPath: filePath), encoding:String.Encoding.utf8)
-			let lines = textFile.components(separatedBy: NSCharacterSet.newlines)
+			let unfilteredLines = textFile.components(separatedBy: NSCharacterSet.newlines)
+			let lines = unfilteredLines.filter({ (element: String) -> Bool in
+				return !element.isEmpty
+			})
 		
 			let numberOfRectangles = Int(lines[0])!
-			self.stripWidth = Int(lines[1])!
 			
 			if (lines[2].components(separatedBy: NSCharacterSet.whitespaces).count == 1) {
 				stripType = .BinPackingProblem
+				binHeight = Int(lines[1])!
+				binWidth = binHeight / 2
+				stripWidth = 0
 			} else {
 				stripType = .StripPackingProblem
+				stripWidth = Int(lines[1])!
+				binHeight = 0
+				binWidth = 0
 			}
 			
 			var readRectangles = [Rectangle]()
@@ -40,7 +50,7 @@ class Problem: NSObject {
 				
 				if (stripType == .BinPackingProblem) {
 					// BPP - width is same as the bin's width, and height is given for each rectangle.
-					readRectangles.append(Rectangle(id: i + 1, width: stripWidth, height: Int(rectangleProperties[0])!))
+					readRectangles.append(Rectangle(id: i + 1, width: binWidth, height: Int(rectangleProperties[0])!))
 				} else {
 					// SPP - both width and height for every rectangle are given.
 					readRectangles.append(Rectangle(id: i + 1, width: Int(rectangleProperties[0])!, height: Int(rectangleProperties[1])!))
@@ -50,8 +60,11 @@ class Problem: NSObject {
 			self.rectangles = readRectangles
 		}
 		catch {
-			self.stripWidth = 0
-			self.rectangles = []
+			stripWidth = 0
+			binWidth = 0
+			binHeight = 0
+			stripType = .StripPackingProblem
+			rectangles = []
 			
 			throw ProblemError.couldNotRead
 		}
@@ -79,7 +92,7 @@ class Problem: NSObject {
 			throw ProblemError.invalidSolution
 		}
 		
-		let strip = Strip(width: self.stripWidth)
+		let strip = Strip(width: stripWidth)
 		placementAlgorithm.placeRectangles(rectangles: rectangles, order: solution, strip: strip)
 		
 		return strip

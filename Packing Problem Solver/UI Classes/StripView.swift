@@ -9,7 +9,7 @@
 import Cocoa
 
 extension PlacedRectangle {
-	public func draw(xStart: Float, yStart: Float, widthAspectRatio: Float, heightAspectRatio: Float) {
+	func draw(xStart: Float, yStart: Float, widthAspectRatio: Float, heightAspectRatio: Float) {
 		NSColor.black.setStroke()
 		
 		let xLowerLeftCorner = xStart + Float(position.x) * widthAspectRatio
@@ -30,8 +30,8 @@ extension PlacedRectangle {
 	}
 }
 
-extension Strip {
-	public func draw(xStart: Float, yStart: Float, widthAspectRatio: Float, heightAspectRatio: Float) {
+extension BaseStrip {
+	func draw(xStart: Float, yStart: Float, widthAspectRatio: Float, heightAspectRatio: Float) {
 		let stripWidthInPx = Float(width) * widthAspectRatio
 		let stripHeightInPx = Float(height) * heightAspectRatio
 		
@@ -50,6 +50,14 @@ extension Strip {
 		let stripFillPath = NSBezierPath(rect: NSRect(x: CGFloat(xStart), y: CGFloat(yStart), width: CGFloat(stripWidthInPx), height: CGFloat(stripHeightInPx)))
 		NSColor.white.setFill()
 		stripFillPath.fill()
+	}
+}
+
+extension Strip {
+	override func draw(xStart: Float, yStart: Float, widthAspectRatio: Float, heightAspectRatio: Float) {
+		super.draw(xStart: xStart, yStart: yStart, widthAspectRatio: widthAspectRatio, heightAspectRatio: heightAspectRatio);
+		
+		let xEnd =  xStart + Float(width) * widthAspectRatio
 		
 		NSColor.blue.setStroke()
 		let dashes: [CGFloat] = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
@@ -68,7 +76,7 @@ extension Strip {
 
 class StripView: NSView {
 
-	var strip: Strip? {
+	var strip: BaseStrip? {
 		didSet {
 			display()
 		}

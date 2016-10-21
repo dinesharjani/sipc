@@ -10,6 +10,9 @@
 		AA2618401DAA716700AF97C1 /* StripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA26183F1DAA716700AF97C1 /* StripView.swift */; };
 		AA2618411DAA716700AF97C1 /* StripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA26183F1DAA716700AF97C1 /* StripView.swift */; };
 		AA2618421DAA716700AF97C1 /* StripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA26183F1DAA716700AF97C1 /* StripView.swift */; };
+		AA54136F1DBA696C002A0C1C /* BaseStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA54136E1DBA696C002A0C1C /* BaseStrip.swift */; };
+		AA5413701DBA696C002A0C1C /* BaseStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA54136E1DBA696C002A0C1C /* BaseStrip.swift */; };
+		AA5413711DBA696C002A0C1C /* BaseStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA54136E1DBA696C002A0C1C /* BaseStrip.swift */; };
 		AA63D3C61DA909BB00A826FD /* PlacedRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA63D3C51DA909BB00A826FD /* PlacedRectangle.swift */; };
 		AA63D3C71DA909BB00A826FD /* PlacedRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA63D3C51DA909BB00A826FD /* PlacedRectangle.swift */; };
 		AA63D3C81DA909BB00A826FD /* PlacedRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA63D3C51DA909BB00A826FD /* PlacedRectangle.swift */; };
@@ -49,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		AA26183F1DAA716700AF97C1 /* StripView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StripView.swift; sourceTree = "<group>"; };
+		AA54136E1DBA696C002A0C1C /* BaseStrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseStrip.swift; sourceTree = "<group>"; };
 		AA63D3C51DA909BB00A826FD /* PlacedRectangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacedRectangle.swift; sourceTree = "<group>"; };
 		AA63D3C91DA90C7800A826FD /* Strip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strip.swift; sourceTree = "<group>"; };
 		AA7F0F411DA553380014722D /* Packing Problem Solver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Packing Problem Solver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +163,7 @@
 				AA63D3C51DA909BB00A826FD /* PlacedRectangle.swift */,
 				AAA9BA551DA5617A0065646E /* Problem.swift */,
 				AA63D3C91DA90C7800A826FD /* Strip.swift */,
+				AA54136E1DBA696C002A0C1C /* BaseStrip.swift */,
 			);
 			path = "Data Classes";
 			sourceTree = "<group>";
@@ -306,6 +311,7 @@
 				AA7F0F471DA553380014722D /* ViewController.swift in Sources */,
 				AA63D3C61DA909BB00A826FD /* PlacedRectangle.swift in Sources */,
 				AA7F0F451DA553380014722D /* AppDelegate.swift in Sources */,
+				AA54136F1DBA696C002A0C1C /* BaseStrip.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +321,7 @@
 			files = (
 				AA7F0F571DA553380014722D /* Packing_Problem_SolverTests.swift in Sources */,
 				AAA9BA571DA5617A0065646E /* Problem.swift in Sources */,
+				AA5413701DBA696C002A0C1C /* BaseStrip.swift in Sources */,
 				AA63D3C71DA909BB00A826FD /* PlacedRectangle.swift in Sources */,
 				AAA9BA531DA55EA80065646E /* Rectangle.swift in Sources */,
 				AA63D3CB1DA90C7800A826FD /* Strip.swift in Sources */,
@@ -328,6 +335,7 @@
 			files = (
 				AA7F0F621DA553380014722D /* Packing_Problem_SolverUITests.swift in Sources */,
 				AAA9BA581DA5617A0065646E /* Problem.swift in Sources */,
+				AA5413711DBA696C002A0C1C /* BaseStrip.swift in Sources */,
 				AA63D3C81DA909BB00A826FD /* PlacedRectangle.swift in Sources */,
 				AAA9BA541DA55EA80065646E /* Rectangle.swift in Sources */,
 				AA63D3CC1DA90C7800A826FD /* Strip.swift in Sources */,

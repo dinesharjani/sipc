@@ -23,7 +23,7 @@ class PlacedRectangle: Rectangle {
 		super.init(id: rectangle.id, width: rectangle.width, height: rectangle.height, margin: rectangle.margin)
 	}
 	
-	public func top() -> Int {
+	func top() -> Int {
 		return super.height + position.y
 	}
 }

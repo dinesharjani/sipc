@@ -70,7 +70,7 @@ class Problem: NSObject {
 		}
 	}
 	
-	public func randomSolution() -> [Int] {
+	func randomSolution() -> [Int] {
 		var remainingRectangles = [Int]()
 		for i in 0 ..< rectangles.count {
 			remainingRectangles.append(i)
@@ -87,7 +87,7 @@ class Problem: NSObject {
 		return solution
 	}
 	
-	public func applySolution(solution: [Int]) throws -> Strip {
+	func applySolution(solution: [Int]) throws -> BaseStrip {
 		guard (solution.count == rectangles.count) else {
 			throw ProblemError.invalidSolution
 		}

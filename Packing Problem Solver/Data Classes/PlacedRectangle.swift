@@ -26,4 +26,8 @@ class PlacedRectangle: Rectangle {
 	func top() -> Int {
 		return super.height + position.y
 	}
+	
+	func right() -> Int {
+		return super.width + position.x
+	}
 }

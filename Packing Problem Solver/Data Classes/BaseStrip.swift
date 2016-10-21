@@ -15,7 +15,7 @@ enum StripType {
 
 class BaseStrip: NSObject {
 
-	let width: Int
+	private (set) public var width: Int
 	private (set) public var height: Int
 	private (set) public var placedRectangles: [PlacedRectangle]
 	
@@ -39,6 +39,10 @@ class BaseStrip: NSObject {
 		
 		if (newRect.top() > self.height) {
 			self.height = newRect.top()
+		}
+		
+		if (newRect.right() > self.width) {
+			self.width = newRect.right()
 		}
 	}
 	

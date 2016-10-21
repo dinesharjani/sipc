@@ -21,11 +21,16 @@ class BaseStrip: NSObject {
 	
 	private var emptySpaces: [Rectangle]
 	
-	init(width: Int) {
+	init(width: Int, height: Int) {
 		self.width = width
-		height = 0
+		self.height = height
 		placedRectangles = [PlacedRectangle]()
 		emptySpaces = [Rectangle]()
+	}
+	
+	func placeRectangles(rectangles: [Rectangle], order: [Int]) {
+		// No-op.
+		// Sub-classes must implement this.
 	}
 	
 	func placeRectangle(rectangle: Rectangle, position: Position) {

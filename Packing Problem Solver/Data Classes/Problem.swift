@@ -92,7 +92,12 @@ class Problem: NSObject {
 			throw ProblemError.invalidSolution
 		}
 		
-		let strip = Strip(width: stripWidth)
+		let strip: BaseStrip
+		if (stripType == .BinPackingProblem) {
+			strip = BinStrip(width: binWidth, height: binHeight)
+		} else {
+			strip = Strip(width: stripWidth)
+		}
 		strip.placeRectangles(rectangles: rectangles, order: solution)
 		
 		return strip

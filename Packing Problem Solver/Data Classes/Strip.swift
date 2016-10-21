@@ -14,13 +14,17 @@ class Strip: BaseStrip {
 	
 	private (set) public var shelves: [Int]
 	
-	override init(width: Int) {
-		self.shelves = [Int]()
-		self.shelves.append(0)
-		super.init(width: width)
+	convenience init (width: Int) {
+		self.init(width: width, height: 0)
 	}
 	
-	func placeRectangles(rectangles: [Rectangle], order: [Int]) {
+	override init(width: Int, height: Int) {
+		self.shelves = [Int]()
+		self.shelves.append(0)
+		super.init(width: width, height: 0)
+	}
+	
+	override func placeRectangles(rectangles: [Rectangle], order: [Int]) {
 		var y = 0
 		var rectanglesToPlace = rectangles
 		

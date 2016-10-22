@@ -31,7 +31,7 @@ extension PlacedRectangle {
 }
 
 extension BaseStrip {
-	func draw(xStart: Float, yStart: Float, widthAspectRatio: Float, heightAspectRatio: Float) {
+	func draw(rect: NSRect, xStart: Float, yStart: Float, widthAspectRatio: Float, heightAspectRatio: Float) {
 		let stripWidthInPx = Float(width) * widthAspectRatio
 		let stripHeightInPx = Float(height) * heightAspectRatio
 		
@@ -54,8 +54,8 @@ extension BaseStrip {
 }
 
 extension Strip {
-	override func draw(xStart: Float, yStart: Float, widthAspectRatio: Float, heightAspectRatio: Float) {
-		super.draw(xStart: xStart, yStart: yStart, widthAspectRatio: widthAspectRatio, heightAspectRatio: heightAspectRatio);
+	override func draw(rect: NSRect, xStart: Float, yStart: Float, widthAspectRatio: Float, heightAspectRatio: Float) {
+		super.draw(rect: rect, xStart: xStart, yStart: yStart, widthAspectRatio: widthAspectRatio, heightAspectRatio: heightAspectRatio);
 		
 		let xEnd =  xStart + Float(width) * widthAspectRatio
 		
@@ -70,6 +70,31 @@ extension Strip {
 			shelfDashedPath.setLineDash(dashes, count: dashes.count, phase: 0.0)
 			shelfDashedPath.lineCapStyle = .buttLineCapStyle
 			shelfDashedPath.stroke()
+		}
+	}
+}
+
+extension BinStrip {
+	override func draw(rect: NSRect, xStart: Float, yStart: Float, widthAspectRatio: Float, heightAspectRatio: Float) {
+		super.draw(rect: rect, xStart: xStart, yStart: yStart, widthAspectRatio: widthAspectRatio, heightAspectRatio: heightAspectRatio);
+		
+		let yTop = yStart + Float(height) * heightAspectRatio
+		let stripTopPath = NSBezierPath()
+		stripTopPath.move(to: NSMakePoint(CGFloat(xStart), CGFloat(yTop)))
+		stripTopPath.line(to: NSMakePoint(CGFloat(xStart + Float(width) * widthAspectRatio), CGFloat(yTop)))
+		stripTopPath.stroke()
+		
+		var verticalLines = bins
+		verticalLines.append(width)
+		
+		NSColor.blue.setStroke()
+		for line in verticalLines {
+			let xLine = xStart + Float(line) * widthAspectRatio
+			
+			let dashedBinPath = NSBezierPath()
+			dashedBinPath.move(to: NSMakePoint(CGFloat(xLine), 0.0))
+			dashedBinPath.line(to: NSMakePoint(CGFloat(xLine), CGFloat(rect.maxY)))
+			dashedBinPath.stroke()
 		}
 	}
 }
@@ -101,7 +126,7 @@ class StripView: NSView {
 		let xStart =  xOffset * widthAspectRatio
 		let yStart = heightAspectRatio * yOffset
 		
-		strip!.draw(xStart: xStart, yStart: yStart, widthAspectRatio: widthAspectRatio, heightAspectRatio: heightAspectRatio)
+		strip!.draw(rect: dirtyRect, xStart: xStart, yStart: yStart, widthAspectRatio: widthAspectRatio, heightAspectRatio: heightAspectRatio)
 		
 		for rectangle in strip!.placedRectangles {
 			rectangle.draw(xStart: xStart, yStart: yStart, widthAspectRatio: widthAspectRatio, heightAspectRatio: heightAspectRatio)

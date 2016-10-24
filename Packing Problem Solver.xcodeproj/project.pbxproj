@@ -34,6 +34,9 @@
 		AAA9BA561DA5617A0065646E /* Problem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA9BA551DA5617A0065646E /* Problem.swift */; };
 		AAA9BA571DA5617A0065646E /* Problem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA9BA551DA5617A0065646E /* Problem.swift */; };
 		AAA9BA581DA5617A0065646E /* Problem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA9BA551DA5617A0065646E /* Problem.swift */; };
+		AACE185E1DBE1CC600A2A0AA /* IntegerNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE185D1DBE1CC600A2A0AA /* IntegerNumberFormatter.swift */; };
+		AACE185F1DBE1CC600A2A0AA /* IntegerNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE185D1DBE1CC600A2A0AA /* IntegerNumberFormatter.swift */; };
+		AACE18601DBE1CC600A2A0AA /* IntegerNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE185D1DBE1CC600A2A0AA /* IntegerNumberFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,7 @@
 		AA7F0F631DA553380014722D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAA9BA511DA55EA80065646E /* Rectangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
 		AAA9BA551DA5617A0065646E /* Problem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem.swift; sourceTree = "<group>"; };
+		AACE185D1DBE1CC600A2A0AA /* IntegerNumberFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntegerNumberFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,7 @@
 		AA7F0F431DA553380014722D /* Packing Problem Solver */ = {
 			isa = PBXGroup;
 			children = (
+				AACE185C1DBE1C9900A2A0AA /* Other */,
 				AAA9BA501DA55E640065646E /* Data Classes */,
 				AA26183E1DAA713C00AF97C1 /* UI Classes */,
 				AA7F0F441DA553380014722D /* AppDelegate.swift */,
@@ -171,6 +176,14 @@
 				AA5413721DBA6FD0002A0C1C /* BinStrip.swift */,
 			);
 			path = "Data Classes";
+			sourceTree = "<group>";
+		};
+		AACE185C1DBE1C9900A2A0AA /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				AACE185D1DBE1CC600A2A0AA /* IntegerNumberFormatter.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +330,7 @@
 				AA63D3C61DA909BB00A826FD /* PlacedRectangle.swift in Sources */,
 				AA7F0F451DA553380014722D /* AppDelegate.swift in Sources */,
 				AA54136F1DBA696C002A0C1C /* BaseStrip.swift in Sources */,
+				AACE185E1DBE1CC600A2A0AA /* IntegerNumberFormatter.swift in Sources */,
 				AA5413731DBA6FD0002A0C1C /* BinStrip.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AACE185F1DBE1CC600A2A0AA /* IntegerNumberFormatter.swift in Sources */,
 				AA7F0F571DA553380014722D /* Packing_Problem_SolverTests.swift in Sources */,
 				AAA9BA571DA5617A0065646E /* Problem.swift in Sources */,
 				AA5413701DBA696C002A0C1C /* BaseStrip.swift in Sources */,
@@ -340,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AACE18601DBE1CC600A2A0AA /* IntegerNumberFormatter.swift in Sources */,
 				AA7F0F621DA553380014722D /* Packing_Problem_SolverUITests.swift in Sources */,
 				AAA9BA581DA5617A0065646E /* Problem.swift in Sources */,
 				AA5413711DBA696C002A0C1C /* BaseStrip.swift in Sources */,

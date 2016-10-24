@@ -12,6 +12,7 @@ class ViewController: NSViewController {
 
 	@IBOutlet weak var problemFilePathField: NSTextField!
 	@IBOutlet weak var problemTypePopUp: NSPopUpButton!
+	@IBOutlet weak var problemTimeLimitField: NSTextField!
 	
 	@IBOutlet weak var stripView: StripView!
 	@IBOutlet weak var solutionHeightField: NSTextField!
@@ -27,6 +28,8 @@ class ViewController: NSViewController {
 		for stripType in StripType.allTypes {
 				problemTypePopUp?.addItem(withTitle: stripType.rawValue)
 		}
+		
+		problemTimeLimitField?.formatter = IntegerNumberFormatter()
 		
 		updateProblemType()
     }

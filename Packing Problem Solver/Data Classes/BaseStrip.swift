@@ -8,9 +8,9 @@
 
 import Cocoa
 
-enum StripType {
-	case BinPackingProblem
-	case StripPackingProblem
+enum StripType: String {
+	case BinPackingProblem = "Bin Packing Problem"
+	case StripPackingProblem = "String Packing Problem"
 }
 
 class BaseStrip: NSObject {

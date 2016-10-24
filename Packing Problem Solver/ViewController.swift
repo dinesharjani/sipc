@@ -11,6 +11,8 @@ import Cocoa
 class ViewController: NSViewController {
 
 	@IBOutlet weak var problemFilePathField: NSTextField!
+	@IBOutlet weak var problemTypePopUp: NSPopUpButton!
+	
 	@IBOutlet weak var stripView: StripView!
 	@IBOutlet weak var solutionHeightField: NSTextField!
 	@IBOutlet weak var solutionUnusedAreaField: NSTextField!
@@ -20,7 +22,12 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        problemTypePopUp?.isEnabled = false
+		problemTypePopUp?.removeAllItems()
+		problemTypePopUp?.addItem(withTitle: "---")
+		problemTypePopUp?.addItem(withTitle: StripType.StripPackingProblem.rawValue)
+		problemTypePopUp?.addItem(withTitle: StripType.BinPackingProblem.rawValue)
+		problemTypePopUp?.selectItem(at: 0)
     }
 
     override var representedObject: Any? {
@@ -47,6 +54,13 @@ class ViewController: NSViewController {
 			let solution = problem!.randomSolution()
 			let strip = try problem!.applySolution(solution: solution)
 			stripView!.strip = strip
+			
+			switch problem!.stripType {
+			case .StripPackingProblem:
+				problemTypePopUp?.selectItem(at: 1)
+			case .BinPackingProblem:
+				problemTypePopUp?.selectItem(at: 2)
+			}
 			
 			solutionHeightField?.stringValue = strip.solutionStringValue()
 			solutionUnusedAreaField?.stringValue = String(format: "Unused Area: %.2f%%", strip.unusedAreaPercentage())

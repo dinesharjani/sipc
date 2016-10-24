@@ -33,6 +33,12 @@ class BaseStrip: NSObject {
 		// Sub-classes must implement this.
 	}
 	
+	func solutionStringValue() -> String {
+		// No-op.
+		// Sub-classes must implement this.
+		return ""
+	}
+	
 	func placeRectangle(rectangle: Rectangle, position: Position) {
 		let newRect = PlacedRectangle(rectangle: rectangle, position: position)
 		placedRectangles.append(newRect)

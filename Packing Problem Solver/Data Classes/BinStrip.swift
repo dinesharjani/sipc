@@ -13,7 +13,7 @@ class BinStrip: BaseStrip {
 	private (set) public var bins: [Int]
 	
 	override init(width: Int, height: Int) {
-		self.bins = [Int]()
+		bins = [Int]()
 		super.init(width: width, height: height)
 	}
 	
@@ -51,5 +51,9 @@ class BinStrip: BaseStrip {
 				}
 			}
 		}
+	}
+	
+	override func solutionStringValue() -> String {
+		return "Bins: \(bins.count)"
 	}
 }

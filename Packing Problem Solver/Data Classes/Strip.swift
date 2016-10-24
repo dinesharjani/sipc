@@ -66,6 +66,10 @@ class Strip: BaseStrip {
 		}
 	}
 	
+	override func solutionStringValue() -> String {
+		return "Height: \(height)"
+	}
+	
 	private func addShelf(shelfHeight: Int) {
 		shelves.append(shelfHeight)
 	}

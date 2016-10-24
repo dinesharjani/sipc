@@ -48,7 +48,7 @@ class ViewController: NSViewController {
 			let strip = try problem!.applySolution(solution: solution)
 			stripView!.strip = strip
 			
-			solutionHeightField?.stringValue = "Height: \(strip.height)"
+			solutionHeightField?.stringValue = strip.solutionStringValue()
 			solutionUnusedAreaField?.stringValue = String(format: "Unused Area: %.2f%%", strip.unusedAreaPercentage())
 		} catch {
 			// TODO

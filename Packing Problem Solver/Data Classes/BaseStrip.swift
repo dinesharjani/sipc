@@ -9,8 +9,11 @@
 import Cocoa
 
 enum StripType: String {
+	case None = "---"
 	case BinPackingProblem = "Bin Packing Problem"
 	case StripPackingProblem = "String Packing Problem"
+	
+	static let allTypes = [None, BinPackingProblem, StripPackingProblem]
 }
 
 class BaseStrip: NSObject {

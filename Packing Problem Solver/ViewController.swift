@@ -24,10 +24,11 @@ class ViewController: NSViewController {
 
         problemTypePopUp?.isEnabled = false
 		problemTypePopUp?.removeAllItems()
-		problemTypePopUp?.addItem(withTitle: "---")
-		problemTypePopUp?.addItem(withTitle: StripType.StripPackingProblem.rawValue)
-		problemTypePopUp?.addItem(withTitle: StripType.BinPackingProblem.rawValue)
-		problemTypePopUp?.selectItem(at: 0)
+		for stripType in StripType.allTypes {
+				problemTypePopUp?.addItem(withTitle: stripType.rawValue)
+		}
+		
+		updateProblemType()
     }
 
     override var representedObject: Any? {
@@ -54,18 +55,28 @@ class ViewController: NSViewController {
 			let solution = problem!.randomSolution()
 			let strip = try problem!.applySolution(solution: solution)
 			stripView!.strip = strip
-			
-			switch problem!.stripType {
-			case .StripPackingProblem:
-				problemTypePopUp?.selectItem(at: 1)
-			case .BinPackingProblem:
-				problemTypePopUp?.selectItem(at: 2)
-			}
+			updateProblemType()
 			
 			solutionHeightField?.stringValue = strip.solutionStringValue()
 			solutionUnusedAreaField?.stringValue = String(format: "Unused Area: %.2f%%", strip.unusedAreaPercentage())
 		} catch {
 			// TODO
+		}
+	}
+	
+	private func updateProblemType() {
+		guard problem != nil else {
+			problemTypePopUp?.selectItem(at: 0)
+			return
+		}
+		
+		switch problem!.stripType {
+		case .BinPackingProblem:
+			problemTypePopUp?.selectItem(at: 1)
+		case .StripPackingProblem:
+			problemTypePopUp?.selectItem(at: 2)
+		default:
+			problemTypePopUp?.selectItem(at: 0)
 		}
 	}
 }

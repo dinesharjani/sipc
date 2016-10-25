@@ -887,7 +887,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="experimentNumberOfCores" destination="WWO-qJ-781" id="ggz-xq-lRs"/>
+                        <outlet property="experimentNumberOfThreads" destination="WWO-qJ-781" id="3NG-Y2-1li"/>
                         <outlet property="problemFilePathField" destination="Lik-Ue-BhX" id="SHh-P0-oAd"/>
                         <outlet property="problemTimeLimitField" destination="ahp-Y8-iWb" id="Wh5-Fw-L0R"/>
                         <outlet property="problemTypePopUp" destination="tpV-qJ-FPQ" id="l7h-xW-keT"/>

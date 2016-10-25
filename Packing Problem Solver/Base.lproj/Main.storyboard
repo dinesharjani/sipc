@@ -888,8 +888,8 @@
                     </view>
                     <connections>
                         <outlet property="experimentNumberOfThreads" destination="WWO-qJ-781" id="3NG-Y2-1li"/>
+                        <outlet property="experimentTimeLimitField" destination="ahp-Y8-iWb" id="wl2-AH-no0"/>
                         <outlet property="problemFilePathField" destination="Lik-Ue-BhX" id="SHh-P0-oAd"/>
-                        <outlet property="problemTimeLimitField" destination="ahp-Y8-iWb" id="Wh5-Fw-L0R"/>
                         <outlet property="problemTypePopUp" destination="tpV-qJ-FPQ" id="l7h-xW-keT"/>
                         <outlet property="solutionHeightField" destination="WkY-5b-Cfn" id="nRS-5h-jSL"/>
                         <outlet property="solutionUnusedAreaField" destination="DgX-KN-0Yx" id="YHu-9M-IJN"/>

@@ -12,7 +12,7 @@ class ViewController: NSViewController {
 
 	@IBOutlet weak var problemFilePathField: NSTextField!
 	@IBOutlet weak var problemTypePopUp: NSPopUpButton!
-	@IBOutlet weak var problemTimeLimitField: NSTextField!
+	@IBOutlet weak var experimentTimeLimitField: NSTextField!
 	@IBOutlet weak var experimentNumberOfThreads: NSPopUpButton!
 	
 	@IBOutlet weak var stripView: StripView!
@@ -29,9 +29,10 @@ class ViewController: NSViewController {
 		for stripType in StripType.allTypes {
 				problemTypePopUp?.addItem(withTitle: stripType.rawValue)
 		}
-		problemTimeLimitField?.formatter = IntegerNumberFormatter()
-		problemTimeLimitField?.intValue = 300
 		updateProblemType()
+		
+		experimentTimeLimitField?.formatter = IntegerNumberFormatter()
+		experimentTimeLimitField?.intValue = 300
 		
 		experimentNumberOfThreads?.removeAllItems()
 		for threadNumber in 1...ProcessInfo.processInfo.activeProcessorCount {

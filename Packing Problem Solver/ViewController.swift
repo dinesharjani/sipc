@@ -14,6 +14,7 @@ class ViewController: NSViewController {
 	@IBOutlet weak var problemTypePopUp: NSPopUpButton!
 	@IBOutlet weak var experimentTimeLimitField: NSTextField!
 	@IBOutlet weak var experimentNumberOfThreads: NSPopUpButton!
+	@IBOutlet weak var experimentAlgorithmPopUp: NSPopUpButton!
 	
 	@IBOutlet weak var stripView: StripView!
 	@IBOutlet weak var solutionHeightField: NSTextField!

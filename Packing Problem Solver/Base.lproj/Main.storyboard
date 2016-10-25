@@ -843,8 +843,37 @@
                                     </menu>
                                 </popUpButtonCell>
                             </popUpButton>
+                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="35f-pX-Q7x">
+                                <rect key="frame" x="89" y="113" width="173" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="akX-i4-AUG"/>
+                                </constraints>
+                                <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="DL6-lN-m9Z" id="RhF-Il-JqB">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="LID-N9-qSZ">
+                                        <items>
+                                            <menuItem title="Item 1" state="on" id="DL6-lN-m9Z"/>
+                                            <menuItem title="Item 2" id="RUU-kn-vLf"/>
+                                            <menuItem title="Item 3" id="Jn5-Q9-caK"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                            </popUpButton>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tQX-QE-85M">
+                                <rect key="frame" x="18" y="118" width="83" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="UcR-Ex-bcJ"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Algorithm:" id="4aH-Y4-14f">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="tQX-QE-85M" firstAttribute="top" secondItem="vyw-v1-36g" secondAttribute="bottom" constant="8" id="0eJ-w7-PqB"/>
                             <constraint firstItem="cdG-QB-URa" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="4r1-Sc-HWg"/>
                             <constraint firstItem="8Qb-Op-J9K" firstAttribute="top" secondItem="tpV-qJ-FPQ" secondAttribute="bottom" constant="26" id="5Gf-ni-DcZ"/>
                             <constraint firstItem="3My-bu-iCR" firstAttribute="leading" secondItem="Lik-Ue-BhX" secondAttribute="trailing" constant="8" id="7ht-pR-atG"/>
@@ -854,11 +883,14 @@
                             <constraint firstItem="9xA-il-DlX" firstAttribute="top" secondItem="Lik-Ue-BhX" secondAttribute="bottom" constant="26" id="AK7-a1-zkI"/>
                             <constraint firstItem="RfA-sJ-L1k" firstAttribute="top" secondItem="Lec-0E-1A5" secondAttribute="bottom" constant="8" id="BIc-dU-JPJ"/>
                             <constraint firstItem="WkY-5b-Cfn" firstAttribute="top" secondItem="RfA-sJ-L1k" secondAttribute="bottom" constant="8" id="BaY-nf-BQT"/>
+                            <constraint firstItem="tQX-QE-85M" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="CwA-bG-Vql"/>
                             <constraint firstItem="vyw-v1-36g" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="GwP-cQ-zG3"/>
                             <constraint firstItem="tpV-qJ-FPQ" firstAttribute="top" secondItem="9xA-il-DlX" secondAttribute="bottom" constant="8" id="Hvj-bV-oIB"/>
+                            <constraint firstItem="Lec-0E-1A5" firstAttribute="leading" secondItem="35f-pX-Q7x" secondAttribute="trailing" constant="8" id="J8y-Fc-Y3e"/>
                             <constraint firstItem="DgX-KN-0Yx" firstAttribute="top" secondItem="WkY-5b-Cfn" secondAttribute="bottom" constant="8" id="KAz-Fi-eHC"/>
                             <constraint firstItem="3My-bu-iCR" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="46" id="LAu-U8-3y9"/>
                             <constraint firstItem="Lec-0E-1A5" firstAttribute="leading" secondItem="ahp-Y8-iWb" secondAttribute="trailing" constant="8" id="MsX-xc-49Z"/>
+                            <constraint firstItem="35f-pX-Q7x" firstAttribute="top" secondItem="WWO-qJ-781" secondAttribute="bottom" constant="4" id="MwM-E2-WuB"/>
                             <constraint firstItem="8Qb-Op-J9K" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="NqL-d4-TKN"/>
                             <constraint firstItem="9xA-il-DlX" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="Pe7-cS-0PK"/>
                             <constraint firstItem="Lik-Ue-BhX" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="T7a-yz-Gi5"/>
@@ -879,6 +911,7 @@
                             <constraint firstAttribute="trailing" secondItem="DgX-KN-0Yx" secondAttribute="trailing" constant="20" id="mBO-Ll-aQa"/>
                             <constraint firstItem="Lec-0E-1A5" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="mP2-Ai-3OT"/>
                             <constraint firstItem="ahp-Y8-iWb" firstAttribute="leading" secondItem="cdG-QB-URa" secondAttribute="trailing" constant="8" id="nMs-IQ-Giq"/>
+                            <constraint firstItem="35f-pX-Q7x" firstAttribute="leading" secondItem="tQX-QE-85M" secondAttribute="trailing" constant="8" id="oV8-zp-3KT"/>
                             <constraint firstAttribute="trailing" secondItem="WkY-5b-Cfn" secondAttribute="trailing" constant="20" id="tcv-0W-87o"/>
                             <constraint firstItem="tpV-qJ-FPQ" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="v7h-Pp-NqN"/>
                             <constraint firstItem="WWO-qJ-781" firstAttribute="top" secondItem="ahp-Y8-iWb" secondAttribute="bottom" constant="4" id="vbC-gw-AcR"/>
@@ -887,6 +920,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="experimentAlgorithmPopUp" destination="35f-pX-Q7x" id="mGt-qh-rK2"/>
                         <outlet property="experimentNumberOfThreads" destination="WWO-qJ-781" id="3NG-Y2-1li"/>
                         <outlet property="experimentTimeLimitField" destination="ahp-Y8-iWb" id="wl2-AH-no0"/>
                         <outlet property="problemFilePathField" destination="Lik-Ue-BhX" id="SHh-P0-oAd"/>

@@ -815,6 +815,34 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vyw-v1-36g">
+                                <rect key="frame" x="18" y="143" width="126" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="C6h-ce-zg8"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Number of Threads:" id="2mV-9N-jfr">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WWO-qJ-781">
+                                <rect key="frame" x="148" y="138" width="114" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ZjX-LJ-ydh"/>
+                                </constraints>
+                                <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="n9K-F5-wjb" id="vu9-xF-gDL">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="V1p-1O-dKe">
+                                        <items>
+                                            <menuItem title="Item 1" state="on" id="n9K-F5-wjb"/>
+                                            <menuItem title="Item 2" id="gY1-ew-zNr"/>
+                                            <menuItem title="Item 3" id="lBe-oV-uGR"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                            </popUpButton>
                         </subviews>
                         <constraints>
                             <constraint firstItem="cdG-QB-URa" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="4r1-Sc-HWg"/>
@@ -826,6 +854,7 @@
                             <constraint firstItem="9xA-il-DlX" firstAttribute="top" secondItem="Lik-Ue-BhX" secondAttribute="bottom" constant="26" id="AK7-a1-zkI"/>
                             <constraint firstItem="RfA-sJ-L1k" firstAttribute="top" secondItem="Lec-0E-1A5" secondAttribute="bottom" constant="8" id="BIc-dU-JPJ"/>
                             <constraint firstItem="WkY-5b-Cfn" firstAttribute="top" secondItem="RfA-sJ-L1k" secondAttribute="bottom" constant="8" id="BaY-nf-BQT"/>
+                            <constraint firstItem="vyw-v1-36g" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="GwP-cQ-zG3"/>
                             <constraint firstItem="tpV-qJ-FPQ" firstAttribute="top" secondItem="9xA-il-DlX" secondAttribute="bottom" constant="8" id="Hvj-bV-oIB"/>
                             <constraint firstItem="DgX-KN-0Yx" firstAttribute="top" secondItem="WkY-5b-Cfn" secondAttribute="bottom" constant="8" id="KAz-Fi-eHC"/>
                             <constraint firstItem="3My-bu-iCR" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="46" id="LAu-U8-3y9"/>
@@ -833,9 +862,12 @@
                             <constraint firstItem="8Qb-Op-J9K" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="NqL-d4-TKN"/>
                             <constraint firstItem="9xA-il-DlX" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="Pe7-cS-0PK"/>
                             <constraint firstItem="Lik-Ue-BhX" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="T7a-yz-Gi5"/>
+                            <constraint firstItem="vyw-v1-36g" firstAttribute="top" secondItem="ahp-Y8-iWb" secondAttribute="bottom" constant="6" id="T7s-Sb-9A7"/>
                             <constraint firstItem="Lec-0E-1A5" firstAttribute="leading" secondItem="9xA-il-DlX" secondAttribute="trailing" constant="91" id="TvW-i4-c3c"/>
                             <constraint firstItem="Kbf-2H-oAN" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="UKL-Ir-XNN"/>
+                            <constraint firstItem="WWO-qJ-781" firstAttribute="leading" secondItem="vyw-v1-36g" secondAttribute="trailing" constant="8" id="WSm-11-soY"/>
                             <constraint firstItem="Lik-Ue-BhX" firstAttribute="top" secondItem="Kbf-2H-oAN" secondAttribute="bottom" constant="8" id="XVn-AZ-pda"/>
+                            <constraint firstItem="Lec-0E-1A5" firstAttribute="leading" secondItem="WWO-qJ-781" secondAttribute="trailing" constant="8" id="YdQ-yZ-Lhs"/>
                             <constraint firstAttribute="bottom" secondItem="DgX-KN-0Yx" secondAttribute="bottom" constant="20" symbolic="YES" id="Ymi-je-iO1"/>
                             <constraint firstItem="Lec-0E-1A5" firstAttribute="leading" secondItem="3My-bu-iCR" secondAttribute="trailing" constant="8" id="Zt6-lw-Mp1"/>
                             <constraint firstItem="Lec-0E-1A5" firstAttribute="leading" secondItem="RfA-sJ-L1k" secondAttribute="leading" id="byk-Jn-2mR"/>
@@ -849,11 +881,13 @@
                             <constraint firstItem="ahp-Y8-iWb" firstAttribute="leading" secondItem="cdG-QB-URa" secondAttribute="trailing" constant="8" id="nMs-IQ-Giq"/>
                             <constraint firstAttribute="trailing" secondItem="WkY-5b-Cfn" secondAttribute="trailing" constant="20" id="tcv-0W-87o"/>
                             <constraint firstItem="tpV-qJ-FPQ" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="v7h-Pp-NqN"/>
+                            <constraint firstItem="WWO-qJ-781" firstAttribute="top" secondItem="ahp-Y8-iWb" secondAttribute="bottom" constant="4" id="vbC-gw-AcR"/>
                             <constraint firstAttribute="trailing" secondItem="Lec-0E-1A5" secondAttribute="trailing" constant="20" id="wyn-gN-koY"/>
                             <constraint firstItem="Lec-0E-1A5" firstAttribute="leading" secondItem="tpV-qJ-FPQ" secondAttribute="trailing" constant="8" id="zal-Vm-nc2"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="experimentNumberOfCores" destination="WWO-qJ-781" id="ggz-xq-lRs"/>
                         <outlet property="problemFilePathField" destination="Lik-Ue-BhX" id="SHh-P0-oAd"/>
                         <outlet property="problemTimeLimitField" destination="ahp-Y8-iWb" id="Wh5-Fw-L0R"/>
                         <outlet property="problemTypePopUp" destination="tpV-qJ-FPQ" id="l7h-xW-keT"/>

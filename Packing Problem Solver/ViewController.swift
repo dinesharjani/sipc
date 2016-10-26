@@ -25,11 +25,7 @@ class ViewController: NSViewController {
 	@IBOutlet weak var solutionHeightField: NSTextField!
 	@IBOutlet weak var solutionUnusedAreaField: NSTextField!
 	
-	let TimerInterval = 1
-	
 	var problem: Problem?
-	
-	var experimentTimer = Timer()
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,19 +77,14 @@ class ViewController: NSViewController {
 			problem = try Problem(filePath: problemFilePath)
 			let solution = Random().solve(problem: problem!)
 			let strip = try problem!.applySolution(solution: solution)
-			stripView!.strip = strip
+			updateStrip(strip: strip)
 			updateProblemType()
-			
-			solutionHeightField?.stringValue = strip.solutionStringValue()
-			solutionUnusedAreaField?.stringValue = String(format: "Unused Area: %.2f%%", strip.unusedAreaPercentage())
 		} catch {
 			// TODO
 		}
 	}
 	
 	@IBAction func runButtonTapped(sender: AnyObject) {
-		experimentTimer.invalidate()
-		
 		problemBrowseButton?.isEnabled = false
 		experimentTimeLimitField?.isEnabled = false
 		experimentAlgorithmPopUp?.isEnabled = false
@@ -103,20 +94,24 @@ class ViewController: NSViewController {
 		experimentProgressBar.maxValue = Double(experimentTimeLimitField.integerValue)
 		experimentProgressBar.doubleValue = 0.0
 		
-		experimentTimer = Timer.scheduledTimer(timeInterval: TimeInterval(TimerInterval), target: self, selector: #selector(experimentTimerAction), userInfo: nil, repeats: true)
+		let experiment = Experiment(problem: problem!, algorithm: Random(), timeLimit: experimentTimeLimitField!.integerValue, numberOfThreads: experimentNumberOfThreads!.integerValue);
+		experiment.run { (elapsed, finished) in
+			self.experimentProgressBar.doubleValue = Double(elapsed)
+			self.updateStrip(strip: experiment.bestSolution!)
+			
+			if (finished) {
+				self.problemBrowseButton?.isEnabled = true
+				self.experimentRunButton.isEnabled = true
+				self.experimentTimeLimitField?.isEnabled = true
+				self.experimentAlgorithmPopUp?.isEnabled = true
+			}
+		}
 	}
 	
-	func experimentTimerAction() {
-		experimentProgressBar.increment(by: Double(TimerInterval))
-		
-		if (experimentProgressBar.doubleValue >= experimentTimeLimitField.doubleValue) {
-			experimentTimer.invalidate()
-			
-			problemBrowseButton?.isEnabled = true
-			experimentRunButton.isEnabled = true
-			experimentTimeLimitField?.isEnabled = true
-			experimentAlgorithmPopUp?.isEnabled = true
-		}
+	private func updateStrip(strip: BaseStrip) {
+		self.stripView!.strip = strip
+		self.solutionHeightField?.stringValue = strip.solutionStringValue()
+		self.solutionUnusedAreaField?.stringValue = String(format: "Waste Area: %.2f%%", strip.unusedAreaPercentage())
 	}
 	
 	private func updateProblemType() {

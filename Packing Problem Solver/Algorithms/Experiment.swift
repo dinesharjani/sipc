@@ -15,7 +15,7 @@ class Experiment: NSObject {
 	var bestSolution: BaseStrip?
 	
 	private var callbackQueue: DispatchQueue {
-		return DispatchQueue.global(qos: DispatchQoS.QoSClass.userInteractive)
+		return DispatchQueue.main
 	}
 	private var controlQueue: DispatchQueue {
 		return DispatchQueue(label: "com.packagesolver.experiment.control")
@@ -49,6 +49,14 @@ class Experiment: NSObject {
 		self.timer.invalidate()
 		finished = false
 		
+		/*
+		do {
+			try self.bestSolution = problem.applySolution(solution: Random().solve(problem: problem))
+		} catch {
+			
+		}
+		*/
+		
 		accumulatedTime = 0
 		timer = Timer.scheduledTimer(timeInterval: TimeInterval(TimerInterval), target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
 		for _ in 1...numberOfThreads {
@@ -64,11 +72,14 @@ class Experiment: NSObject {
 				self.finished = true
 			}
 			
-			self.callback!(self.accumulatedTime, self.finished)
+			self.callbackQueue.async {
+				self.callback!(self.accumulatedTime, self.finished)
+			}
 		}
 	}
 	
 	private func solve() {
+		var numberOfIterations = 0
 		while (!finished) {
 			do {
 				let solutionOrder = algorithm.solve(problem: problem)
@@ -84,7 +95,7 @@ class Experiment: NSObject {
 						return;
 					}
 					
-					if (bestSolution!.height > solution.height
+					if (bestSolution!.height >= solution.height
 						|| bestSolution!.totalEmptySpacesArea() > solution.totalEmptySpacesArea()) {
 						bestSolution = solution
 					}
@@ -92,6 +103,9 @@ class Experiment: NSObject {
 			} catch {
 				// try again
 			}
+			
+			numberOfIterations += 1
+			print(numberOfIterations)
 		}
 	}
 }

@@ -12,6 +12,8 @@ class ViewController: NSViewController {
 
 	@IBOutlet weak var problemFilePathField: NSTextField!
 	@IBOutlet weak var problemTypePopUp: NSPopUpButton!
+	
+	@IBOutlet weak var experimentBox: NSBox!
 	@IBOutlet weak var experimentTimeLimitField: NSTextField!
 	@IBOutlet weak var experimentNumberOfThreads: NSPopUpButton!
 	@IBOutlet weak var experimentAlgorithmPopUp: NSPopUpButton!
@@ -32,6 +34,7 @@ class ViewController: NSViewController {
 		}
 		updateProblemType()
 		
+		experimentBox?.isHidden = true
 		experimentTimeLimitField?.formatter = IntegerNumberFormatter()
 		experimentTimeLimitField?.intValue = 300
 		
@@ -65,6 +68,7 @@ class ViewController: NSViewController {
 		
 		problemFilePathField?.stringValue = problemFilePath
 		problemFilePathField?.textColor = NSColor.black
+		experimentBox?.isHidden = false
 		
 		do {
 			problem = try Problem(filePath: problemFilePath)

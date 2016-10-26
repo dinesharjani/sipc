@@ -59,26 +59,30 @@ class Experiment: NSObject {
 		
 		accumulatedTime = 0
 		timer = Timer.scheduledTimer(timeInterval: TimeInterval(TimerInterval), target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
-		for _ in 1...numberOfThreads {
-			computationalQueue.async(execute: solve)
+		for i in 1...numberOfThreads {
+			weak var weakSelf = self
+			computationalQueue.async {
+				weakSelf?.solve(threadNumber: i)
+			}
 		}
 	}
 	
 	func timerAction() {
-		controlQueue.async { 
-			self.accumulatedTime += self.TimerInterval
-			if (self.accumulatedTime >= self.timeLimit) {
-				self.timer.invalidate()
-				self.finished = true
+		controlQueue.async {
+			weak var weakSelf = self
+			weakSelf!.accumulatedTime += weakSelf!.TimerInterval
+			if (weakSelf!.accumulatedTime >= weakSelf!.timeLimit) {
+				weakSelf!.timer.invalidate()
+				weakSelf!.finished = true
 			}
 			
-			self.callbackQueue.async {
-				self.callback!(self.accumulatedTime, self.finished)
+			weakSelf!.callbackQueue.async {
+				weakSelf!.callback!(weakSelf!.accumulatedTime, weakSelf!.finished)
 			}
 		}
 	}
 	
-	private func solve() {
+	private func solve(threadNumber: Int) {
 		var numberOfIterations = 0
 		while (!finished) {
 			do {
@@ -105,7 +109,7 @@ class Experiment: NSObject {
 			}
 			
 			numberOfIterations += 1
-			print(numberOfIterations)
+			print("T\(threadNumber): \(numberOfIterations)")
 		}
 	}
 }

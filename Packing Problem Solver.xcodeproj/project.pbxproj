@@ -13,6 +13,9 @@
 		AA143B6D1DC0C19500196490 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA143B6C1DC0C19500196490 /* Random.swift */; };
 		AA143B6E1DC0C19500196490 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA143B6C1DC0C19500196490 /* Random.swift */; };
 		AA143B6F1DC0C19500196490 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA143B6C1DC0C19500196490 /* Random.swift */; };
+		AA143B711DC0D87800196490 /* Experiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA143B701DC0D87800196490 /* Experiment.swift */; };
+		AA143B721DC0D87800196490 /* Experiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA143B701DC0D87800196490 /* Experiment.swift */; };
+		AA143B731DC0D87800196490 /* Experiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA143B701DC0D87800196490 /* Experiment.swift */; };
 		AA2618401DAA716700AF97C1 /* StripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA26183F1DAA716700AF97C1 /* StripView.swift */; };
 		AA2618411DAA716700AF97C1 /* StripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA26183F1DAA716700AF97C1 /* StripView.swift */; };
 		AA2618421DAA716700AF97C1 /* StripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA26183F1DAA716700AF97C1 /* StripView.swift */; };
@@ -65,6 +68,7 @@
 /* Begin PBXFileReference section */
 		AA143B681DBFD5E400196490 /* HeuristicAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeuristicAlgorithm.swift; sourceTree = "<group>"; };
 		AA143B6C1DC0C19500196490 /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
+		AA143B701DC0D87800196490 /* Experiment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Experiment.swift; sourceTree = "<group>"; };
 		AA26183F1DAA716700AF97C1 /* StripView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StripView.swift; sourceTree = "<group>"; };
 		AA54136E1DBA696C002A0C1C /* BaseStrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseStrip.swift; sourceTree = "<group>"; };
 		AA5413721DBA6FD0002A0C1C /* BinStrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinStrip.swift; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 			children = (
 				AA143B681DBFD5E400196490 /* HeuristicAlgorithm.swift */,
 				AA143B6C1DC0C19500196490 /* Random.swift */,
+				AA143B701DC0D87800196490 /* Experiment.swift */,
 			);
 			path = Algorithms;
 			sourceTree = "<group>";
@@ -349,6 +354,7 @@
 				AA63D3C61DA909BB00A826FD /* PlacedRectangle.swift in Sources */,
 				AA7F0F451DA553380014722D /* AppDelegate.swift in Sources */,
 				AA143B6D1DC0C19500196490 /* Random.swift in Sources */,
+				AA143B711DC0D87800196490 /* Experiment.swift in Sources */,
 				AA54136F1DBA696C002A0C1C /* BaseStrip.swift in Sources */,
 				AACE185E1DBE1CC600A2A0AA /* IntegerNumberFormatter.swift in Sources */,
 				AA5413731DBA6FD0002A0C1C /* BinStrip.swift in Sources */,
@@ -359,6 +365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA143B721DC0D87800196490 /* Experiment.swift in Sources */,
 				AACE185F1DBE1CC600A2A0AA /* IntegerNumberFormatter.swift in Sources */,
 				AA7F0F571DA553380014722D /* Packing_Problem_SolverTests.swift in Sources */,
 				AAA9BA571DA5617A0065646E /* Problem.swift in Sources */,
@@ -377,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA143B731DC0D87800196490 /* Experiment.swift in Sources */,
 				AACE18601DBE1CC600A2A0AA /* IntegerNumberFormatter.swift in Sources */,
 				AA7F0F621DA553380014722D /* Packing_Problem_SolverUITests.swift in Sources */,
 				AAA9BA581DA5617A0065646E /* Problem.swift in Sources */,

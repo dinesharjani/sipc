@@ -11,7 +11,7 @@ import Cocoa
 enum StripType: String {
 	case None = "---"
 	case BinPackingProblem = "Bin Packing Problem"
-	case StripPackingProblem = "String Packing Problem"
+	case StripPackingProblem = "Strip Packing Problem"
 	
 	static let allTypes = [None, BinPackingProblem, StripPackingProblem]
 }

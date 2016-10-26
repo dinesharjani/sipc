@@ -10,6 +10,7 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+	@IBOutlet weak var problemBrowseButton: NSButton!
 	@IBOutlet weak var problemFilePathField: NSTextField!
 	@IBOutlet weak var problemTypePopUp: NSPopUpButton!
 	
@@ -17,13 +18,18 @@ class ViewController: NSViewController {
 	@IBOutlet weak var experimentTimeLimitField: NSTextField!
 	@IBOutlet weak var experimentNumberOfThreads: NSPopUpButton!
 	@IBOutlet weak var experimentAlgorithmPopUp: NSPopUpButton!
+	@IBOutlet weak var experimentRunButton: NSButton!
 	@IBOutlet weak var experimentProgressBar: NSProgressIndicator!
 	
 	@IBOutlet weak var stripView: StripView!
 	@IBOutlet weak var solutionHeightField: NSTextField!
 	@IBOutlet weak var solutionUnusedAreaField: NSTextField!
 	
+	let TimerInterval = 1
+	
 	var problem: Problem?
+	
+	var experimentTimer = Timer()
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +43,7 @@ class ViewController: NSViewController {
 		
 		experimentBox?.isHidden = true
 		experimentTimeLimitField?.formatter = IntegerNumberFormatter()
-		experimentTimeLimitField?.intValue = 300
+		experimentTimeLimitField?.intValue = 20
 		
 		experimentAlgorithmPopUp?.removeAllItems()
 		for algorithm in Algorithms.allAlgorithms {
@@ -86,7 +92,31 @@ class ViewController: NSViewController {
 	}
 	
 	@IBAction func runButtonTapped(sender: AnyObject) {
+		experimentTimer.invalidate()
 		
+		problemBrowseButton?.isEnabled = false
+		experimentTimeLimitField?.isEnabled = false
+		experimentAlgorithmPopUp?.isEnabled = false
+		
+		experimentRunButton.isEnabled = false
+		experimentProgressBar.minValue = 0
+		experimentProgressBar.maxValue = Double(experimentTimeLimitField.integerValue)
+		experimentProgressBar.doubleValue = 0.0
+		
+		experimentTimer = Timer.scheduledTimer(timeInterval: TimeInterval(TimerInterval), target: self, selector: #selector(experimentTimerAction), userInfo: nil, repeats: true)
+	}
+	
+	func experimentTimerAction() {
+		experimentProgressBar.increment(by: Double(TimerInterval))
+		
+		if (experimentProgressBar.doubleValue >= experimentTimeLimitField.doubleValue) {
+			experimentTimer.invalidate()
+			
+			problemBrowseButton?.isEnabled = true
+			experimentRunButton.isEnabled = true
+			experimentTimeLimitField?.isEnabled = true
+			experimentAlgorithmPopUp?.isEnabled = true
+		}
 	}
 	
 	private func updateProblemType() {

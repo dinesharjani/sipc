@@ -944,7 +944,9 @@
                         <outlet property="experimentBox" destination="rdv-XR-CxG" id="4gB-wv-vAl"/>
                         <outlet property="experimentNumberOfThreads" destination="WWO-qJ-781" id="3NG-Y2-1li"/>
                         <outlet property="experimentProgressBar" destination="WQ4-TC-Mce" id="nAX-mb-uYD"/>
+                        <outlet property="experimentRunButton" destination="rWS-sa-8f9" id="vUU-4h-8UI"/>
                         <outlet property="experimentTimeLimitField" destination="ahp-Y8-iWb" id="wl2-AH-no0"/>
+                        <outlet property="problemBrowseButton" destination="3My-bu-iCR" id="xnr-jO-flJ"/>
                         <outlet property="problemFilePathField" destination="Lik-Ue-BhX" id="SHh-P0-oAd"/>
                         <outlet property="problemTypePopUp" destination="tpV-qJ-FPQ" id="l7h-xW-keT"/>
                         <outlet property="solutionHeightField" destination="WkY-5b-Cfn" id="nRS-5h-jSL"/>

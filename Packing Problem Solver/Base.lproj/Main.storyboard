@@ -859,6 +859,21 @@
                                                 </menu>
                                             </popUpButtonCell>
                                         </popUpButton>
+                                        <progressIndicator wantsLayer="YES" fixedFrame="YES" maxValue="100" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="WQ4-TC-Mce">
+                                            <rect key="frame" x="20" y="51" width="201" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        </progressIndicator>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rWS-sa-8f9">
+                                            <rect key="frame" x="80" y="20" width="81" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="Run" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cvQ-gG-DNB">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="runButtonTappedWithSender:" target="XfG-lQ-9wD" id="54y-Lp-Z2h"/>
+                                            </connections>
+                                        </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tQX-QE-85M">
                                             <rect key="frame" x="18" y="82" width="67" height="17"/>
                                             <constraints>
@@ -928,6 +943,7 @@
                         <outlet property="experimentAlgorithmPopUp" destination="35f-pX-Q7x" id="mGt-qh-rK2"/>
                         <outlet property="experimentBox" destination="rdv-XR-CxG" id="4gB-wv-vAl"/>
                         <outlet property="experimentNumberOfThreads" destination="WWO-qJ-781" id="3NG-Y2-1li"/>
+                        <outlet property="experimentProgressBar" destination="WQ4-TC-Mce" id="nAX-mb-uYD"/>
                         <outlet property="experimentTimeLimitField" destination="ahp-Y8-iWb" id="wl2-AH-no0"/>
                         <outlet property="problemFilePathField" destination="Lik-Ue-BhX" id="SHh-P0-oAd"/>
                         <outlet property="problemTypePopUp" destination="tpV-qJ-FPQ" id="l7h-xW-keT"/>

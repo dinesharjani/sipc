@@ -26,7 +26,10 @@ class Strip: BaseStrip {
 	
 	override func placeRectangles(rectangles: [Rectangle], order: [Int]) {
 		var y = 0
-		var rectanglesToPlace = rectangles
+		var rectanglesToPlace = [Rectangle]()
+		for i in 0..<rectangles.count {
+			rectanglesToPlace.append(rectangles[order[i]])
+		}
 		
 		// One while iteration per shelf.
 		while (!rectanglesToPlace.isEmpty) {

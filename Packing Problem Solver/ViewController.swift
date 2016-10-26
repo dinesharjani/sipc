@@ -28,12 +28,17 @@ class ViewController: NSViewController {
         problemTypePopUp?.isEnabled = false
 		problemTypePopUp?.removeAllItems()
 		for stripType in StripType.allTypes {
-				problemTypePopUp?.addItem(withTitle: stripType.rawValue)
+			problemTypePopUp?.addItem(withTitle: stripType.rawValue)
 		}
 		updateProblemType()
 		
 		experimentTimeLimitField?.formatter = IntegerNumberFormatter()
 		experimentTimeLimitField?.intValue = 300
+		
+		experimentAlgorithmPopUp?.removeAllItems()
+		for algorithm in Algorithms.allAlgorithms {
+			experimentAlgorithmPopUp?.addItem(withTitle: algorithm.rawValue)
+		}
 		
 		experimentNumberOfThreads?.removeAllItems()
 		for threadNumber in 1...ProcessInfo.processInfo.activeProcessorCount {
@@ -63,7 +68,7 @@ class ViewController: NSViewController {
 		
 		do {
 			problem = try Problem(filePath: problemFilePath)
-			let solution = problem!.randomSolution()
+			let solution = Random().solve(problem: problem!)
 			let strip = try problem!.applySolution(solution: solution)
 			stripView!.strip = strip
 			updateProblemType()

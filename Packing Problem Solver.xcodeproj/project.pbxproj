@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA143B691DBFD5E400196490 /* HeuristicAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA143B681DBFD5E400196490 /* HeuristicAlgorithm.swift */; };
+		AA143B6A1DBFD5E400196490 /* HeuristicAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA143B681DBFD5E400196490 /* HeuristicAlgorithm.swift */; };
+		AA143B6B1DBFD5E400196490 /* HeuristicAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA143B681DBFD5E400196490 /* HeuristicAlgorithm.swift */; };
+		AA143B6D1DC0C19500196490 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA143B6C1DC0C19500196490 /* Random.swift */; };
+		AA143B6E1DC0C19500196490 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA143B6C1DC0C19500196490 /* Random.swift */; };
+		AA143B6F1DC0C19500196490 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA143B6C1DC0C19500196490 /* Random.swift */; };
 		AA2618401DAA716700AF97C1 /* StripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA26183F1DAA716700AF97C1 /* StripView.swift */; };
 		AA2618411DAA716700AF97C1 /* StripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA26183F1DAA716700AF97C1 /* StripView.swift */; };
 		AA2618421DAA716700AF97C1 /* StripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA26183F1DAA716700AF97C1 /* StripView.swift */; };
@@ -57,6 +63,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA143B681DBFD5E400196490 /* HeuristicAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeuristicAlgorithm.swift; sourceTree = "<group>"; };
+		AA143B6C1DC0C19500196490 /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
 		AA26183F1DAA716700AF97C1 /* StripView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StripView.swift; sourceTree = "<group>"; };
 		AA54136E1DBA696C002A0C1C /* BaseStrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseStrip.swift; sourceTree = "<group>"; };
 		AA5413721DBA6FD0002A0C1C /* BinStrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinStrip.swift; sourceTree = "<group>"; };
@@ -104,6 +112,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA143B671DBFD5B800196490 /* Algorithms */ = {
+			isa = PBXGroup;
+			children = (
+				AA143B681DBFD5E400196490 /* HeuristicAlgorithm.swift */,
+				AA143B6C1DC0C19500196490 /* Random.swift */,
+			);
+			path = Algorithms;
+			sourceTree = "<group>";
+		};
 		AA26183E1DAA713C00AF97C1 /* UI Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +152,7 @@
 		AA7F0F431DA553380014722D /* Packing Problem Solver */ = {
 			isa = PBXGroup;
 			children = (
+				AA143B671DBFD5B800196490 /* Algorithms */,
 				AACE185C1DBE1C9900A2A0AA /* Other */,
 				AAA9BA501DA55E640065646E /* Data Classes */,
 				AA26183E1DAA713C00AF97C1 /* UI Classes */,
@@ -324,11 +342,13 @@
 			files = (
 				AAA9BA521DA55EA80065646E /* Rectangle.swift in Sources */,
 				AAA9BA561DA5617A0065646E /* Problem.swift in Sources */,
+				AA143B691DBFD5E400196490 /* HeuristicAlgorithm.swift in Sources */,
 				AA2618401DAA716700AF97C1 /* StripView.swift in Sources */,
 				AA63D3CA1DA90C7800A826FD /* Strip.swift in Sources */,
 				AA7F0F471DA553380014722D /* ViewController.swift in Sources */,
 				AA63D3C61DA909BB00A826FD /* PlacedRectangle.swift in Sources */,
 				AA7F0F451DA553380014722D /* AppDelegate.swift in Sources */,
+				AA143B6D1DC0C19500196490 /* Random.swift in Sources */,
 				AA54136F1DBA696C002A0C1C /* BaseStrip.swift in Sources */,
 				AACE185E1DBE1CC600A2A0AA /* IntegerNumberFormatter.swift in Sources */,
 				AA5413731DBA6FD0002A0C1C /* BinStrip.swift in Sources */,
@@ -345,9 +365,11 @@
 				AA5413701DBA696C002A0C1C /* BaseStrip.swift in Sources */,
 				AA63D3C71DA909BB00A826FD /* PlacedRectangle.swift in Sources */,
 				AA5413741DBA6FD0002A0C1C /* BinStrip.swift in Sources */,
+				AA143B6A1DBFD5E400196490 /* HeuristicAlgorithm.swift in Sources */,
 				AAA9BA531DA55EA80065646E /* Rectangle.swift in Sources */,
 				AA63D3CB1DA90C7800A826FD /* Strip.swift in Sources */,
 				AA2618411DAA716700AF97C1 /* StripView.swift in Sources */,
+				AA143B6E1DC0C19500196490 /* Random.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,9 +383,11 @@
 				AA5413711DBA696C002A0C1C /* BaseStrip.swift in Sources */,
 				AA63D3C81DA909BB00A826FD /* PlacedRectangle.swift in Sources */,
 				AA5413751DBA6FD0002A0C1C /* BinStrip.swift in Sources */,
+				AA143B6B1DBFD5E400196490 /* HeuristicAlgorithm.swift in Sources */,
 				AAA9BA541DA55EA80065646E /* Rectangle.swift in Sources */,
 				AA63D3CC1DA90C7800A826FD /* Strip.swift in Sources */,
 				AA2618421DAA716700AF97C1 /* StripView.swift in Sources */,
+				AA143B6F1DC0C19500196490 /* Random.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

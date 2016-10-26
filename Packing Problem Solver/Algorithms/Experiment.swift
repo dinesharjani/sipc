@@ -95,7 +95,7 @@ class Experiment: NSObject {
 						return;
 					}
 					
-					if (bestSolution!.height >= solution.height
+					if (bestSolution!.height > solution.height
 						|| bestSolution!.totalEmptySpacesArea() > solution.totalEmptySpacesArea()) {
 						bestSolution = solution
 					}

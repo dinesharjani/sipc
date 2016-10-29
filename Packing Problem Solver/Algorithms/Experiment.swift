@@ -48,68 +48,58 @@ class Experiment: NSObject {
 		self.callback = callback
 		self.timer.invalidate()
 		finished = false
-		
-		/*
-		do {
-			try self.bestSolution = problem.applySolution(solution: Random().solve(problem: problem))
-		} catch {
-			
-		}
-		*/
-		
 		accumulatedTime = 0
+		
 		timer = Timer.scheduledTimer(timeInterval: TimeInterval(TimerInterval), target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
 		for i in 1...numberOfThreads {
-			weak var weakSelf = self
 			computationalQueue.async {
-				weakSelf?.solve(threadNumber: i)
+				self.solve(threadNumber: i)
 			}
 		}
 	}
 	
 	func timerAction() {
 		controlQueue.async {
-			weak var weakSelf = self
-			weakSelf!.accumulatedTime += weakSelf!.TimerInterval
-			if (weakSelf!.accumulatedTime >= weakSelf!.timeLimit) {
-				weakSelf!.timer.invalidate()
-				weakSelf!.finished = true
+			self.accumulatedTime += self.TimerInterval
+			if (self.accumulatedTime >= self.timeLimit) {
+				self.timer.invalidate()
+				self.finished = true
 			}
 			
-			weakSelf!.callbackQueue.async {
-				weakSelf!.callback!(weakSelf!.accumulatedTime, weakSelf!.finished)
+			self.callbackQueue.async {
+				self.callback!(self.accumulatedTime, self.finished)
 			}
 		}
 	}
 	
 	private func solve(threadNumber: Int) {
 		var numberOfIterations = 0
-		while (!finished) {
-			do {
-				let solutionOrder = algorithm.solve(problem: problem)
-				let solution = try problem.applySolution(solution: solutionOrder)
-				
-				guard (!finished) else {
-					return
-				}
-				
-				controlQueue.sync {
-					guard (bestSolution != nil) else {
-						bestSolution = solution
-						return;
+		autoreleasepool {
+			while (!finished) {
+				do {
+					let solutionOrder = algorithm.solve(problem: problem)
+					let solution = try problem.applySolution(solution: solutionOrder)
+					guard (!finished) else {
+						return
 					}
 					
-					if (bestSolution!.height > solution.height
-						|| bestSolution!.totalEmptySpacesArea() > solution.totalEmptySpacesArea()) {
-						bestSolution = solution
+					controlQueue.sync {
+						guard (bestSolution != nil) else {
+							bestSolution = solution
+							return;
+						}
+					
+						if (bestSolution!.height > solution.height
+							|| bestSolution!.totalEmptySpacesArea() > solution.totalEmptySpacesArea()) {
+							bestSolution = solution
+						}
 					}
+				} catch {
+					// try again
 				}
-			} catch {
-				// try again
+				numberOfIterations += 1
+				print("T\(threadNumber): \(numberOfIterations)")
 			}
-			
-			numberOfIterations += 1
-			print("T\(threadNumber): \(numberOfIterations)")
 		}
 	}
 }

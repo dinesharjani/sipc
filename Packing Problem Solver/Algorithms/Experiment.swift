@@ -98,7 +98,6 @@ class Experiment: NSObject {
 					// try again
 				}
 				numberOfIterations += 1
-				print("T\(threadNumber): \(numberOfIterations)")
 			}
 		}
 	}

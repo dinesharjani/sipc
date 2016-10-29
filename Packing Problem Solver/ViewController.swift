@@ -50,7 +50,6 @@ class ViewController: NSViewController {
 		for threadNumber in 1...ProcessInfo.processInfo.activeProcessorCount {
 			experimentNumberOfThreads?.addItem(withTitle: String(threadNumber))
 		}
-		experimentNumberOfThreads?.isEnabled = false
     }
 
     override var representedObject: Any? {
@@ -94,7 +93,7 @@ class ViewController: NSViewController {
 		experimentProgressBar.maxValue = Double(experimentTimeLimitField.integerValue)
 		experimentProgressBar.doubleValue = 0.0
 		
-		let experiment = Experiment(problem: problem!, algorithm: Random(), timeLimit: experimentTimeLimitField!.integerValue, numberOfThreads: experimentNumberOfThreads!.integerValue);
+		let experiment = Experiment(problem: problem!, algorithm: Random(), timeLimit: experimentTimeLimitField!.integerValue, numberOfThreads: experimentNumberOfThreads!.indexOfSelectedItem + 1);
 		experiment.run { (elapsed, finished) in
 			self.experimentProgressBar.doubleValue = Double(elapsed)
 			self.updateStrip(strip: experiment.bestSolution!)

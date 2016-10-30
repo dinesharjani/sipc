@@ -19,8 +19,10 @@ class BinStrip: BaseStrip {
 	
 	override func placeRectangles(rectangles: [Rectangle], order: [Int]) {
 		let binWidth = rectangles[0].width
-		
-		var rectanglesToPlace = rectangles
+		var rectanglesToPlace = [Rectangle]()
+		for i in 0..<rectangles.count {
+			rectanglesToPlace.append(rectangles[order[i]])
+		}
 		var x = 0
 		
 		while (!rectanglesToPlace.isEmpty) {

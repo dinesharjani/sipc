@@ -24,6 +24,8 @@ class ViewController: NSViewController {
 	@IBOutlet weak var stripView: StripView!
 	@IBOutlet weak var solutionHeightField: NSTextField!
 	@IBOutlet weak var solutionUnusedAreaField: NSTextField!
+	@IBOutlet weak var experimentAverageSolutionField: NSTextField!
+	@IBOutlet weak var experimentIterationsPerSecondField: NSTextField!
 	
 	var problem: Problem?
 	
@@ -96,6 +98,9 @@ class ViewController: NSViewController {
 		let experiment = Experiment(problem: problem!, algorithm: Algorithms.algorithmFromValue(value: experimentAlgorithmPopUp!.selectedItem!.title), timeLimit: experimentTimeLimitField!.integerValue, numberOfThreads: experimentNumberOfThreads!.indexOfSelectedItem + 1);
 		experiment.run { (elapsed, finished) in
 			self.experimentProgressBar.doubleValue = Double(elapsed)
+			self.experimentAverageSolutionField?.stringValue = String(format: "Average Solution: %.2f", experiment.averageSolution)
+			let iterationsPerSecond = experiment.totalNumberOfIterations / elapsed
+			self.experimentIterationsPerSecondField?.stringValue = String(format: "Iterations / Second: \(iterationsPerSecond)")
 			
 			// Maybe one isn't ready yet.
 			if (experiment.bestSolution != nil) {

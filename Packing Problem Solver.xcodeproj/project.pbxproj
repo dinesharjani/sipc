@@ -46,6 +46,9 @@
 		AACE185E1DBE1CC600A2A0AA /* IntegerNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE185D1DBE1CC600A2A0AA /* IntegerNumberFormatter.swift */; };
 		AACE185F1DBE1CC600A2A0AA /* IntegerNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE185D1DBE1CC600A2A0AA /* IntegerNumberFormatter.swift */; };
 		AACE18601DBE1CC600A2A0AA /* IntegerNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE185D1DBE1CC600A2A0AA /* IntegerNumberFormatter.swift */; };
+		AAD7A0C41DC8BC3800896026 /* HillClimbing.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD7A0C31DC8BC3800896026 /* HillClimbing.swift */; };
+		AAD7A0C51DC8BC3800896026 /* HillClimbing.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD7A0C31DC8BC3800896026 /* HillClimbing.swift */; };
+		AAD7A0C61DC8BC3800896026 /* HillClimbing.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD7A0C31DC8BC3800896026 /* HillClimbing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +92,7 @@
 		AAA9BA511DA55EA80065646E /* Rectangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
 		AAA9BA551DA5617A0065646E /* Problem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem.swift; sourceTree = "<group>"; };
 		AACE185D1DBE1CC600A2A0AA /* IntegerNumberFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntegerNumberFormatter.swift; sourceTree = "<group>"; };
+		AAD7A0C31DC8BC3800896026 /* HillClimbing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HillClimbing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,7 @@
 				AA143B681DBFD5E400196490 /* HeuristicAlgorithm.swift */,
 				AA143B6C1DC0C19500196490 /* Random.swift */,
 				AA143B701DC0D87800196490 /* Experiment.swift */,
+				AAD7A0C31DC8BC3800896026 /* HillClimbing.swift */,
 			);
 			path = Algorithms;
 			sourceTree = "<group>";
@@ -358,6 +363,7 @@
 				AA54136F1DBA696C002A0C1C /* BaseStrip.swift in Sources */,
 				AACE185E1DBE1CC600A2A0AA /* IntegerNumberFormatter.swift in Sources */,
 				AA5413731DBA6FD0002A0C1C /* BinStrip.swift in Sources */,
+				AAD7A0C41DC8BC3800896026 /* HillClimbing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +379,7 @@
 				AA63D3C71DA909BB00A826FD /* PlacedRectangle.swift in Sources */,
 				AA5413741DBA6FD0002A0C1C /* BinStrip.swift in Sources */,
 				AA143B6A1DBFD5E400196490 /* HeuristicAlgorithm.swift in Sources */,
+				AAD7A0C51DC8BC3800896026 /* HillClimbing.swift in Sources */,
 				AAA9BA531DA55EA80065646E /* Rectangle.swift in Sources */,
 				AA63D3CB1DA90C7800A826FD /* Strip.swift in Sources */,
 				AA2618411DAA716700AF97C1 /* StripView.swift in Sources */,
@@ -392,6 +399,7 @@
 				AA63D3C81DA909BB00A826FD /* PlacedRectangle.swift in Sources */,
 				AA5413751DBA6FD0002A0C1C /* BinStrip.swift in Sources */,
 				AA143B6B1DBFD5E400196490 /* HeuristicAlgorithm.swift in Sources */,
+				AAD7A0C61DC8BC3800896026 /* HillClimbing.swift in Sources */,
 				AAA9BA541DA55EA80065646E /* Rectangle.swift in Sources */,
 				AA63D3CC1DA90C7800A826FD /* Strip.swift in Sources */,
 				AA2618421DAA716700AF97C1 /* StripView.swift in Sources */,

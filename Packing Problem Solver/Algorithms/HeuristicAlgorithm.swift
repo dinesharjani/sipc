@@ -9,9 +9,24 @@
 import Cocoa
 
 enum Algorithms: String {
-	case Random = "Random"
+	case RandomAlgorithm = "Random"
+	static var randomInstance = Random()
 	
-	static let allAlgorithms = [Random]
+	case HillClimbingAlgorithm = "Local Search"
+	static let hillClimbingInstance = HillClimbing()
+	
+	static let allAlgorithms = [RandomAlgorithm, HillClimbingAlgorithm]
+	
+	static func algorithmFromValue(value: String) -> HeuristicAlgorithm {
+		switch value {
+		case RandomAlgorithm.rawValue:
+			return randomInstance
+		case HillClimbingAlgorithm.rawValue:
+			return hillClimbingInstance
+		default:
+			return randomInstance
+		}
+	}
 }
 
 class HeuristicAlgorithm : NSObject {

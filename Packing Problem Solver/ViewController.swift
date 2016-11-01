@@ -93,7 +93,7 @@ class ViewController: NSViewController {
 		experimentProgressBar.maxValue = Double(experimentTimeLimitField.integerValue)
 		experimentProgressBar.doubleValue = 0.0
 		
-		let experiment = Experiment(problem: problem!, algorithm: Random(), timeLimit: experimentTimeLimitField!.integerValue, numberOfThreads: experimentNumberOfThreads!.indexOfSelectedItem + 1);
+		let experiment = Experiment(problem: problem!, algorithm: Algorithms.algorithmFromValue(value: experimentAlgorithmPopUp!.selectedItem!.title), timeLimit: experimentTimeLimitField!.integerValue, numberOfThreads: experimentNumberOfThreads!.indexOfSelectedItem + 1);
 		experiment.run { (elapsed, finished) in
 			self.experimentProgressBar.doubleValue = Double(elapsed)
 			self.updateStrip(strip: experiment.bestSolution!)

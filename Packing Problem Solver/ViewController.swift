@@ -96,7 +96,11 @@ class ViewController: NSViewController {
 		let experiment = Experiment(problem: problem!, algorithm: Algorithms.algorithmFromValue(value: experimentAlgorithmPopUp!.selectedItem!.title), timeLimit: experimentTimeLimitField!.integerValue, numberOfThreads: experimentNumberOfThreads!.indexOfSelectedItem + 1);
 		experiment.run { (elapsed, finished) in
 			self.experimentProgressBar.doubleValue = Double(elapsed)
-			self.updateStrip(strip: experiment.bestSolution!)
+			
+			// Maybe one isn't ready yet.
+			if (experiment.bestSolution != nil) {
+				self.updateStrip(strip: experiment.bestSolution!)
+			}
 			
 			if (finished) {
 				self.problemBrowseButton?.isEnabled = true

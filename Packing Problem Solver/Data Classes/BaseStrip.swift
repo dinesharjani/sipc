@@ -65,6 +65,11 @@ class BaseStrip: NSObject {
 		return (unusedArea / stripArea) * 100
 	}
 	
+	func isBetterThan(otherStrip: BaseStrip) -> Bool {
+		return (self.height < otherStrip.height
+			&& totalEmptySpacesArea() < otherStrip.totalEmptySpacesArea())
+	}
+	
 	internal func totalEmptySpacesArea() -> Int {
 		var total = 0
 		for emptySpace in emptySpaces {

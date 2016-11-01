@@ -13,6 +13,8 @@ class Experiment: NSObject {
 	private let TimerInterval = 1
 	
 	var bestSolution: BaseStrip?
+	var totalNumberOfIterations: Int
+	var averageSolution: Float
 	
 	private var callbackQueue: DispatchQueue {
 		return DispatchQueue.main
@@ -40,6 +42,8 @@ class Experiment: NSObject {
 		self.timeLimit = timeLimit
 		self.numberOfThreads = numberOfThreads
 		self.timer = Timer()
+		totalNumberOfIterations = 0
+		averageSolution = 0
 		accumulatedTime = 0
 		finished = false
 	}
@@ -84,6 +88,9 @@ class Experiment: NSObject {
 					}
 					
 					controlQueue.sync {
+						totalNumberOfIterations += 1
+						averageSolution = (averageSolution + Float(solution.height)) / 2
+						
 						guard (bestSolution != nil) else {
 							bestSolution = solution
 							return;

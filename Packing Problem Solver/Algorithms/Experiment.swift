@@ -89,14 +89,14 @@ class Experiment: NSObject {
 					
 					controlQueue.sync {
 						totalNumberOfIterations += 1
-						averageSolution = (averageSolution + Float(solution.height)) / 2
+						averageSolution = (averageSolution + Float(solution.guidanceValue())) / 2
 						
 						guard (bestSolution != nil) else {
 							bestSolution = solution
 							return;
 						}
 					
-						if (bestSolution!.height > solution.height
+						if (bestSolution!.guidanceValue() > solution.guidanceValue()
 							|| bestSolution!.totalEmptySpacesArea() > solution.totalEmptySpacesArea()) {
 							bestSolution = solution
 						}

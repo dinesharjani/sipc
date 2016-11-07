@@ -70,6 +70,10 @@ class BaseStrip: NSObject {
 			&& totalEmptySpacesArea() < otherStrip.totalEmptySpacesArea())
 	}
 	
+	func guidanceValue() -> Int {
+		return height
+	}
+	
 	internal func totalEmptySpacesArea() -> Int {
 		var total = 0
 		for emptySpace in emptySpaces {

@@ -55,6 +55,10 @@ class BinStrip: BaseStrip {
 		}
 	}
 	
+	override func guidanceValue() -> Int {
+		return bins.count
+	}
+	
 	override func solutionStringValue() -> String {
 		return "Bins: \(bins.count)"
 	}

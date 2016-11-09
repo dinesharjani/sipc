@@ -43,6 +43,9 @@
 		AAA8153E1DD34A1F0099A03F /* SimulatedAnnealing.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA8153D1DD34A1F0099A03F /* SimulatedAnnealing.swift */; };
 		AAA8153F1DD34A1F0099A03F /* SimulatedAnnealing.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA8153D1DD34A1F0099A03F /* SimulatedAnnealing.swift */; };
 		AAA815401DD34A1F0099A03F /* SimulatedAnnealing.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA8153D1DD34A1F0099A03F /* SimulatedAnnealing.swift */; };
+		AAA815421DD39ADD0099A03F /* Movement.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA815411DD39ADD0099A03F /* Movement.swift */; };
+		AAA815431DD39ADD0099A03F /* Movement.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA815411DD39ADD0099A03F /* Movement.swift */; };
+		AAA815441DD39ADD0099A03F /* Movement.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA815411DD39ADD0099A03F /* Movement.swift */; };
 		AAA9BA521DA55EA80065646E /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA9BA511DA55EA80065646E /* Rectangle.swift */; };
 		AAA9BA531DA55EA80065646E /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA9BA511DA55EA80065646E /* Rectangle.swift */; };
 		AAA9BA541DA55EA80065646E /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA9BA511DA55EA80065646E /* Rectangle.swift */; };
@@ -97,6 +100,7 @@
 		AA7F0F631DA553380014722D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAA815391DD3454A0099A03F /* packing-problem-solver.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "packing-problem-solver.icns"; sourceTree = "<group>"; };
 		AAA8153D1DD34A1F0099A03F /* SimulatedAnnealing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulatedAnnealing.swift; sourceTree = "<group>"; };
+		AAA815411DD39ADD0099A03F /* Movement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movement.swift; sourceTree = "<group>"; };
 		AAA9BA511DA55EA80065646E /* Rectangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
 		AAA9BA551DA5617A0065646E /* Problem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem.swift; sourceTree = "<group>"; };
 		AACE185D1DBE1CC600A2A0AA /* IntegerNumberFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntegerNumberFormatter.swift; sourceTree = "<group>"; };
@@ -136,6 +140,7 @@
 				AA143B701DC0D87800196490 /* Experiment.swift */,
 				AAD7A0C31DC8BC3800896026 /* HillClimbing.swift */,
 				AAA8153D1DD34A1F0099A03F /* SimulatedAnnealing.swift */,
+				AAA815411DD39ADD0099A03F /* Movement.swift */,
 			);
 			path = Algorithms;
 			sourceTree = "<group>";
@@ -375,6 +380,7 @@
 				AAA9BA561DA5617A0065646E /* Problem.swift in Sources */,
 				AA143B691DBFD5E400196490 /* HeuristicAlgorithm.swift in Sources */,
 				AA2618401DAA716700AF97C1 /* StripView.swift in Sources */,
+				AAA815421DD39ADD0099A03F /* Movement.swift in Sources */,
 				AA63D3CA1DA90C7800A826FD /* Strip.swift in Sources */,
 				AA7F0F471DA553380014722D /* ViewController.swift in Sources */,
 				AA63D3C61DA909BB00A826FD /* PlacedRectangle.swift in Sources */,
@@ -401,6 +407,7 @@
 				AA63D3C71DA909BB00A826FD /* PlacedRectangle.swift in Sources */,
 				AA5413741DBA6FD0002A0C1C /* BinStrip.swift in Sources */,
 				AA143B6A1DBFD5E400196490 /* HeuristicAlgorithm.swift in Sources */,
+				AAA815431DD39ADD0099A03F /* Movement.swift in Sources */,
 				AAA8153F1DD34A1F0099A03F /* SimulatedAnnealing.swift in Sources */,
 				AAD7A0C51DC8BC3800896026 /* HillClimbing.swift in Sources */,
 				AAA9BA531DA55EA80065646E /* Rectangle.swift in Sources */,
@@ -422,6 +429,7 @@
 				AA63D3C81DA909BB00A826FD /* PlacedRectangle.swift in Sources */,
 				AA5413751DBA6FD0002A0C1C /* BinStrip.swift in Sources */,
 				AA143B6B1DBFD5E400196490 /* HeuristicAlgorithm.swift in Sources */,
+				AAA815441DD39ADD0099A03F /* Movement.swift in Sources */,
 				AAA815401DD34A1F0099A03F /* SimulatedAnnealing.swift in Sources */,
 				AAD7A0C61DC8BC3800896026 /* HillClimbing.swift in Sources */,
 				AAA9BA541DA55EA80065646E /* Rectangle.swift in Sources */,

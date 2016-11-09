@@ -37,6 +37,9 @@
 		AA7F0F4C1DA553380014722D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA7F0F4A1DA553380014722D /* Main.storyboard */; };
 		AA7F0F571DA553380014722D /* Packing_Problem_SolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7F0F561DA553380014722D /* Packing_Problem_SolverTests.swift */; };
 		AA7F0F621DA553380014722D /* Packing_Problem_SolverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7F0F611DA553380014722D /* Packing_Problem_SolverUITests.swift */; };
+		AAA8153A1DD3454A0099A03F /* packing-problem-solver.icns in Resources */ = {isa = PBXBuildFile; fileRef = AAA815391DD3454A0099A03F /* packing-problem-solver.icns */; };
+		AAA8153B1DD3454A0099A03F /* packing-problem-solver.icns in Resources */ = {isa = PBXBuildFile; fileRef = AAA815391DD3454A0099A03F /* packing-problem-solver.icns */; };
+		AAA8153C1DD3454A0099A03F /* packing-problem-solver.icns in Resources */ = {isa = PBXBuildFile; fileRef = AAA815391DD3454A0099A03F /* packing-problem-solver.icns */; };
 		AAA9BA521DA55EA80065646E /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA9BA511DA55EA80065646E /* Rectangle.swift */; };
 		AAA9BA531DA55EA80065646E /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA9BA511DA55EA80065646E /* Rectangle.swift */; };
 		AAA9BA541DA55EA80065646E /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA9BA511DA55EA80065646E /* Rectangle.swift */; };
@@ -89,6 +92,7 @@
 		AA7F0F5D1DA553380014722D /* Packing Problem SolverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Packing Problem SolverUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA7F0F611DA553380014722D /* Packing_Problem_SolverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Packing_Problem_SolverUITests.swift; sourceTree = "<group>"; };
 		AA7F0F631DA553380014722D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAA815391DD3454A0099A03F /* packing-problem-solver.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "packing-problem-solver.icns"; sourceTree = "<group>"; };
 		AAA9BA511DA55EA80065646E /* Rectangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
 		AAA9BA551DA5617A0065646E /* Problem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem.swift; sourceTree = "<group>"; };
 		AACE185D1DBE1CC600A2A0AA /* IntegerNumberFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntegerNumberFormatter.swift; sourceTree = "<group>"; };
@@ -171,6 +175,7 @@
 				AA7F0F481DA553380014722D /* Assets.xcassets */,
 				AA7F0F4A1DA553380014722D /* Main.storyboard */,
 				AA7F0F4D1DA553380014722D /* Info.plist */,
+				AAA815381DD3452C0099A03F /* Resources */,
 			);
 			path = "Packing Problem Solver";
 			sourceTree = "<group>";
@@ -191,6 +196,14 @@
 				AA7F0F631DA553380014722D /* Info.plist */,
 			);
 			path = "Packing Problem SolverUITests";
+			sourceTree = "<group>";
+		};
+		AAA815381DD3452C0099A03F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AAA815391DD3454A0099A03F /* packing-problem-solver.icns */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		AAA9BA501DA55E640065646E /* Data Classes */ = {
@@ -326,6 +339,7 @@
 			files = (
 				AA7F0F491DA553380014722D /* Assets.xcassets in Resources */,
 				AA7F0F4C1DA553380014722D /* Main.storyboard in Resources */,
+				AAA8153A1DD3454A0099A03F /* packing-problem-solver.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +347,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAA8153B1DD3454A0099A03F /* packing-problem-solver.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +355,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAA8153C1DD3454A0099A03F /* packing-problem-solver.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

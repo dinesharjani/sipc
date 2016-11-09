@@ -10,21 +10,30 @@ import Cocoa
 
 enum Algorithms: String {
 	case RandomAlgorithm = "Random"
-	static var randomInstance = Random()
-	
 	case HillClimbingAlgorithm = "Local Search"
-	static let hillClimbingInstance = HillClimbing()
+	
+	private static var randomInstance = Random()
+	private static let hillClimbingInstance = HillClimbing()
 	
 	static let allAlgorithms = [RandomAlgorithm, HillClimbingAlgorithm]
+	
+	func instance() -> HeuristicAlgorithm {
+		switch self {
+		case .RandomAlgorithm:
+			return Algorithms.randomInstance
+		case .HillClimbingAlgorithm:
+			return Algorithms.hillClimbingInstance
+		}
+	}
 	
 	static func algorithmFromValue(value: String) -> HeuristicAlgorithm {
 		switch value {
 		case RandomAlgorithm.rawValue:
-			return randomInstance
+			return RandomAlgorithm.instance()
 		case HillClimbingAlgorithm.rawValue:
 			return hillClimbingInstance
 		default:
-			return randomInstance
+			return HillClimbingAlgorithm.instance()
 		}
 	}
 }

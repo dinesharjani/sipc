@@ -14,7 +14,7 @@ class HillClimbing: HeuristicAlgorithm {
 	private let MaxNumberOfTriesWithoutImprovement = 3
 	
 	override func solve(problem: Problem) -> [Int] {
-		let randomSolution = Algorithms.randomInstance.solve(problem: problem)
+		let randomSolution = Algorithms.RandomAlgorithm.instance().solve(problem: problem)
 		var bestNeighbor = randomSolution
 		var bestNeighborStrip: BaseStrip
 		do {

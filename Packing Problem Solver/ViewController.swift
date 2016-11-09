@@ -88,6 +88,7 @@ class ViewController: NSViewController {
 	@IBAction func runButtonTapped(sender: AnyObject) {
 		problemBrowseButton?.isEnabled = false
 		experimentTimeLimitField?.isEnabled = false
+		experimentNumberOfThreads?.isEnabled = false
 		experimentAlgorithmPopUp?.isEnabled = false
 		
 		experimentRunButton.isEnabled = false
@@ -111,6 +112,7 @@ class ViewController: NSViewController {
 				self.problemBrowseButton?.isEnabled = true
 				self.experimentRunButton.isEnabled = true
 				self.experimentTimeLimitField?.isEnabled = true
+				self.experimentNumberOfThreads?.isEnabled = true
 				self.experimentAlgorithmPopUp?.isEnabled = true
 			}
 		}

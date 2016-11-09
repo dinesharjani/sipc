@@ -11,11 +11,13 @@ import Cocoa
 enum Algorithms: String {
 	case RandomAlgorithm = "Random"
 	case HillClimbingAlgorithm = "Local Search"
+	case SimulatedAnnealingAlgorithm = "Simulated Annealing"
 	
-	private static var randomInstance = Random()
+	private static let randomInstance = Random()
 	private static let hillClimbingInstance = HillClimbing()
+	private static let saInstance = SimulatedAnnealing()
 	
-	static let allAlgorithms = [RandomAlgorithm, HillClimbingAlgorithm]
+	static let allAlgorithms = [RandomAlgorithm, HillClimbingAlgorithm, SimulatedAnnealingAlgorithm]
 	
 	func instance() -> HeuristicAlgorithm {
 		switch self {
@@ -23,6 +25,8 @@ enum Algorithms: String {
 			return Algorithms.randomInstance
 		case .HillClimbingAlgorithm:
 			return Algorithms.hillClimbingInstance
+		case .SimulatedAnnealingAlgorithm:
+			return Algorithms.saInstance
 		}
 	}
 	
@@ -31,7 +35,9 @@ enum Algorithms: String {
 		case RandomAlgorithm.rawValue:
 			return RandomAlgorithm.instance()
 		case HillClimbingAlgorithm.rawValue:
-			return hillClimbingInstance
+			return HillClimbingAlgorithm.instance()
+		case SimulatedAnnealingAlgorithm.rawValue:
+			return SimulatedAnnealingAlgorithm.instance()
 		default:
 			return HillClimbingAlgorithm.instance()
 		}

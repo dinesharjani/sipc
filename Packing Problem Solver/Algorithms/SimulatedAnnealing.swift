@@ -10,7 +10,7 @@ import Cocoa
 
 class SimulatedAnnealing: HeuristicAlgorithm {
 	
-	private static let MaxNumberOfSteps = 5
+	private static let MaxNumberOfSteps = 10
 	private static let StartingTemperature = 29.87
 	private static let CoolingFactor = 0.877
 	
@@ -22,10 +22,11 @@ class SimulatedAnnealing: HeuristicAlgorithm {
 			var bestStrip = try problem.applySolution(solution: bestSolution)
 			
 			var temperature = SimulatedAnnealing.StartingTemperature
+			var numberOfSteps = 1
 			print(String(format: "Temperature: %.2f°C", temperature))
 			
 			repeat {
-				for _ in 1...SimulatedAnnealing.MaxNumberOfSteps {
+				for _ in 1...numberOfSteps {
 					let neighborSolution = neighbor(startingSolution: bestSolution, currentTemperature: temperature)
 					let neighborStrip = try problem.applySolution(solution: neighborSolution)
 					
@@ -37,6 +38,9 @@ class SimulatedAnnealing: HeuristicAlgorithm {
 				}
 				
 				temperature *= SimulatedAnnealing.CoolingFactor
+				if (numberOfSteps < SimulatedAnnealing.MaxNumberOfSteps) {
+					numberOfSteps += 1
+				}
 				print(String(format: "Temperature: %.2f°C", temperature))
 			} while (temperature >= 1)
 		}

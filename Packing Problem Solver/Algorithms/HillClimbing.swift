@@ -15,7 +15,11 @@ class HillClimbing: HeuristicAlgorithm {
 	
 	override func solve(problem: Problem) -> [Int] {
 		let randomSolution = Algorithms.RandomAlgorithm.instance().solve(problem: problem)
-		var bestNeighbor = randomSolution
+		return findBestNeighbor(problem: problem, initialSolution: randomSolution)
+	}
+	
+	func findBestNeighbor(problem: Problem, initialSolution: [Int]) -> [Int] {
+		var bestNeighbor = initialSolution
 		var bestNeighborStrip: BaseStrip
 		do {
 			bestNeighborStrip = try problem.applySolution(solution: bestNeighbor)

@@ -25,7 +25,6 @@ class SimulatedAnnealing: HeuristicAlgorithm {
 			
 			var temperature = SimulatedAnnealing.StartingTemperature
 			var numberOfSteps = 1
-			print(String(format: "Temperature: %.2f°C", temperature))
 			
 			repeat {
 				for _ in 1...numberOfSteps {
@@ -35,14 +34,12 @@ class SimulatedAnnealing: HeuristicAlgorithm {
 					if (neighborStrip.isBetterThan(otherStrip: bestStrip)) {
 						bestSolution = neighborSolution
 						bestStrip = neighborStrip
-						
-						currentSolution = bestSolution
-						currentStrip = bestStrip
-					} else if (acceptWorseSolution(currentValue: currentStrip.guidanceValue(), proposedValue: neighborStrip.guidanceValue(), temperature: temperature)) {
+					}
+					
+					if (neighborStrip.isBetterThan(otherStrip: currentStrip)
+						|| acceptWorseSolution(currentValue: currentStrip.guidanceValue(), proposedValue: neighborStrip.guidanceValue(), temperature: temperature)) {
 						currentSolution = neighborSolution
 						currentStrip = neighborStrip
-						
-						print("Accepted worse solution from \(currentStrip.guidanceValue()) to \(neighborStrip.guidanceValue())")
 					}
 				}
 				
@@ -50,7 +47,6 @@ class SimulatedAnnealing: HeuristicAlgorithm {
 				if (numberOfSteps < SimulatedAnnealing.MaxNumberOfSteps) {
 					numberOfSteps += 1
 				}
-				print(String(format: "Temperature: %.2f°C", temperature))
 			} while (temperature >= 1)
 		}
 		catch {

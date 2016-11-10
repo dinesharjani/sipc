@@ -66,7 +66,7 @@ class BaseStrip: NSObject {
 	}
 	
 	func isBetterThan(otherStrip: BaseStrip) -> Bool {
-		return (self.height < otherStrip.height
+		return (self.guidanceValue() < otherStrip.guidanceValue()
 			&& totalEmptySpacesArea() < otherStrip.totalEmptySpacesArea())
 	}
 	

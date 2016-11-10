@@ -20,6 +20,8 @@ class SimulatedAnnealing: HeuristicAlgorithm {
 		do {
 			bestSolution = Algorithms.RandomAlgorithm.instance().solve(problem: problem)
 			var bestStrip = try problem.applySolution(solution: bestSolution)
+			var currentSolution = bestSolution
+			var currentStrip = bestStrip
 			
 			var temperature = SimulatedAnnealing.StartingTemperature
 			var numberOfSteps = 1
@@ -27,13 +29,20 @@ class SimulatedAnnealing: HeuristicAlgorithm {
 			
 			repeat {
 				for _ in 1...numberOfSteps {
-					let neighborSolution = neighbor(startingSolution: bestSolution, currentTemperature: temperature)
+					let neighborSolution = neighbor(startingSolution: currentSolution, currentTemperature: temperature)
 					let neighborStrip = try problem.applySolution(solution: neighborSolution)
 					
-					if (neighborStrip.isBetterThan(otherStrip: bestStrip)
-						|| acceptWorseSolution(currentValue: bestStrip.guidanceValue(), proposedValue: neighborStrip.guidanceValue(), temperature: temperature)) {
+					if (neighborStrip.isBetterThan(otherStrip: bestStrip)) {
 						bestSolution = neighborSolution
 						bestStrip = neighborStrip
+						
+						currentSolution = bestSolution
+						currentStrip = bestStrip
+					} else if (acceptWorseSolution(currentValue: currentStrip.guidanceValue(), proposedValue: neighborStrip.guidanceValue(), temperature: temperature)) {
+						currentSolution = neighborSolution
+						currentStrip = neighborStrip
+						
+						print("Accepted worse solution from \(currentStrip.guidanceValue()) to \(neighborStrip.guidanceValue())")
 					}
 				}
 				

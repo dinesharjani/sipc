@@ -99,7 +99,7 @@ class ViewController: NSViewController {
 		let experiment = Experiment(problem: problem!, algorithm: Algorithms.algorithmFromValue(value: experimentAlgorithmPopUp!.selectedItem!.title), timeLimit: experimentTimeLimitField!.integerValue, numberOfThreads: experimentNumberOfThreads!.indexOfSelectedItem + 1);
 		experiment.run { (elapsed, finished) in
 			self.experimentProgressBar.doubleValue = Double(elapsed)
-			self.experimentAverageSolutionField?.stringValue = String(format: "Average Solution: %.2f", experiment.averageSolution)
+			self.experimentAverageSolutionField?.stringValue = "Average Solution: ..."
 			let iterationsPerSecond = experiment.totalNumberOfIterations / elapsed
 			self.experimentIterationsPerSecondField?.stringValue = String(format: "Iterations / Second: \(iterationsPerSecond)")
 			
@@ -109,6 +109,8 @@ class ViewController: NSViewController {
 			}
 			
 			if (finished) {
+				self.experimentAverageSolutionField?.stringValue = String(format: "Average Solution: %.2f", experiment.averageSolution)
+				
 				self.problemBrowseButton?.isEnabled = true
 				self.experimentRunButton.isEnabled = true
 				self.experimentTimeLimitField?.isEnabled = true

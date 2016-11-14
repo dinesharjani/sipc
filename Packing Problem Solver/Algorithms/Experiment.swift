@@ -14,7 +14,15 @@ class Experiment: NSObject {
 	
 	var bestSolution: BaseStrip?
 	var totalNumberOfIterations: Int
-	var averageSolution: Float
+	var averageSolution: Float {
+		get {
+			var acc: Float = 0.0
+			for value in solutionsList {
+				acc += value
+			}
+			return acc / Float(solutionsList.count)
+		}
+	}
 	
 	private var callbackQueue: DispatchQueue {
 		return DispatchQueue.main
@@ -30,6 +38,7 @@ class Experiment: NSObject {
 	private let algorithm: HeuristicAlgorithm
 	private let timeLimit: Int
 	private let numberOfThreads: Int
+	private var solutionsList: [Float]
 	
 	private var timer: Timer
 	private var accumulatedTime: Int
@@ -41,9 +50,9 @@ class Experiment: NSObject {
 		self.algorithm = algorithm
 		self.timeLimit = timeLimit
 		self.numberOfThreads = numberOfThreads
+		self.solutionsList = [Float]()
 		self.timer = Timer()
 		totalNumberOfIterations = 0
-		averageSolution = 0
 		accumulatedTime = 0
 		finished = false
 	}
@@ -89,7 +98,7 @@ class Experiment: NSObject {
 					
 					controlQueue.sync {
 						totalNumberOfIterations += 1
-						averageSolution = (averageSolution + Float(solution.guidanceValue())) / 2
+						solutionsList.append(Float(solution.guidanceValue()))
 						
 						guard (bestSolution != nil) else {
 							bestSolution = solution

@@ -11,8 +11,6 @@ import Cocoa
 class SimulatedAnnealing: HeuristicAlgorithm {
 	
 	private static let MaxNumberOfSteps = 10
-	private static let StartingTemperature = 29.87
-	private static let CoolingFactor = 0.877
 	
 	override func solve(problem: Problem) -> [Int] {
 		var bestSolution: [Int]
@@ -23,7 +21,7 @@ class SimulatedAnnealing: HeuristicAlgorithm {
 			var currentSolution = bestSolution
 			var currentStrip = bestStrip
 			
-			var temperature = SimulatedAnnealing.StartingTemperature
+			var temperature = startingTemperature()
 			var numberOfSteps = 1
 			
 			repeat {
@@ -43,7 +41,7 @@ class SimulatedAnnealing: HeuristicAlgorithm {
 					}
 				}
 				
-				temperature *= SimulatedAnnealing.CoolingFactor
+				temperature = cooldown(temperature: temperature)
 				if (numberOfSteps < SimulatedAnnealing.MaxNumberOfSteps) {
 					numberOfSteps += 1
 				}
@@ -54,6 +52,14 @@ class SimulatedAnnealing: HeuristicAlgorithm {
 		}
 		
 		return bestSolution
+	}
+	
+	internal func startingTemperature() -> Double {
+		return 29.87
+	}
+	
+	internal func cooldown(temperature: Double) -> Double {
+		return temperature * 0.877
 	}
 	
 	internal func neighbor(startingSolution: [Int], currentTemperature: Double) -> [Int] {

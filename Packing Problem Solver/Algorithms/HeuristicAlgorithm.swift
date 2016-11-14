@@ -10,9 +10,9 @@ import Cocoa
 
 enum Algorithms: String {
 	case RandomAlgorithm = "Random"
-	case HillClimbingAlgorithm = "Local Search"
+	case HillClimbingAlgorithm = "Randomized Local Search"
 	case SimulatedAnnealingAlgorithm = "Simulated Annealing"
-	case ImprovedSimulatedAnnealingAlgorithm = "Improved SA"
+	case ImprovedSimulatedAnnealingAlgorithm = "Improved Simulated Annealing"
 	
 	private static let randomInstance = Random()
 	private static let hillClimbingInstance = HillClimbing()

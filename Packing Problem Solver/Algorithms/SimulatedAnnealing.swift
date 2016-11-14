@@ -56,7 +56,7 @@ class SimulatedAnnealing: HeuristicAlgorithm {
 		return bestSolution
 	}
 	
-	private func neighbor(startingSolution: [Int], currentTemperature: Double) -> [Int] {
+	internal func neighbor(startingSolution: [Int], currentTemperature: Double) -> [Int] {
 		return Movement.OneExchange.performMovement(initialSolution: startingSolution)
 	}
 	

@@ -25,6 +25,9 @@
 		AA5413731DBA6FD0002A0C1C /* BinStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5413721DBA6FD0002A0C1C /* BinStrip.swift */; };
 		AA5413741DBA6FD0002A0C1C /* BinStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5413721DBA6FD0002A0C1C /* BinStrip.swift */; };
 		AA5413751DBA6FD0002A0C1C /* BinStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5413721DBA6FD0002A0C1C /* BinStrip.swift */; };
+		AA5E758F1DD9CC1700136209 /* ImprovedSimulatedAnnealing.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5E758E1DD9CC1700136209 /* ImprovedSimulatedAnnealing.swift */; };
+		AA5E75901DD9CC1700136209 /* ImprovedSimulatedAnnealing.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5E758E1DD9CC1700136209 /* ImprovedSimulatedAnnealing.swift */; };
+		AA5E75911DD9CC1700136209 /* ImprovedSimulatedAnnealing.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5E758E1DD9CC1700136209 /* ImprovedSimulatedAnnealing.swift */; };
 		AA63D3C61DA909BB00A826FD /* PlacedRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA63D3C51DA909BB00A826FD /* PlacedRectangle.swift */; };
 		AA63D3C71DA909BB00A826FD /* PlacedRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA63D3C51DA909BB00A826FD /* PlacedRectangle.swift */; };
 		AA63D3C81DA909BB00A826FD /* PlacedRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA63D3C51DA909BB00A826FD /* PlacedRectangle.swift */; };
@@ -84,6 +87,7 @@
 		AA26183F1DAA716700AF97C1 /* StripView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StripView.swift; sourceTree = "<group>"; };
 		AA54136E1DBA696C002A0C1C /* BaseStrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseStrip.swift; sourceTree = "<group>"; };
 		AA5413721DBA6FD0002A0C1C /* BinStrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinStrip.swift; sourceTree = "<group>"; };
+		AA5E758E1DD9CC1700136209 /* ImprovedSimulatedAnnealing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImprovedSimulatedAnnealing.swift; sourceTree = "<group>"; };
 		AA63D3C51DA909BB00A826FD /* PlacedRectangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacedRectangle.swift; sourceTree = "<group>"; };
 		AA63D3C91DA90C7800A826FD /* Strip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strip.swift; sourceTree = "<group>"; };
 		AA7F0F411DA553380014722D /* Packing Problem Solver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Packing Problem Solver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +145,7 @@
 				AAD7A0C31DC8BC3800896026 /* HillClimbing.swift */,
 				AAA8153D1DD34A1F0099A03F /* SimulatedAnnealing.swift */,
 				AAA815411DD39ADD0099A03F /* Movement.swift */,
+				AA5E758E1DD9CC1700136209 /* ImprovedSimulatedAnnealing.swift */,
 			);
 			path = Algorithms;
 			sourceTree = "<group>";
@@ -388,6 +393,7 @@
 				AA143B6D1DC0C19500196490 /* Random.swift in Sources */,
 				AAA8153E1DD34A1F0099A03F /* SimulatedAnnealing.swift in Sources */,
 				AA143B711DC0D87800196490 /* Experiment.swift in Sources */,
+				AA5E758F1DD9CC1700136209 /* ImprovedSimulatedAnnealing.swift in Sources */,
 				AA54136F1DBA696C002A0C1C /* BaseStrip.swift in Sources */,
 				AACE185E1DBE1CC600A2A0AA /* IntegerNumberFormatter.swift in Sources */,
 				AA5413731DBA6FD0002A0C1C /* BinStrip.swift in Sources */,
@@ -411,6 +417,7 @@
 				AAA8153F1DD34A1F0099A03F /* SimulatedAnnealing.swift in Sources */,
 				AAD7A0C51DC8BC3800896026 /* HillClimbing.swift in Sources */,
 				AAA9BA531DA55EA80065646E /* Rectangle.swift in Sources */,
+				AA5E75901DD9CC1700136209 /* ImprovedSimulatedAnnealing.swift in Sources */,
 				AA63D3CB1DA90C7800A826FD /* Strip.swift in Sources */,
 				AA2618411DAA716700AF97C1 /* StripView.swift in Sources */,
 				AA143B6E1DC0C19500196490 /* Random.swift in Sources */,
@@ -433,6 +440,7 @@
 				AAA815401DD34A1F0099A03F /* SimulatedAnnealing.swift in Sources */,
 				AAD7A0C61DC8BC3800896026 /* HillClimbing.swift in Sources */,
 				AAA9BA541DA55EA80065646E /* Rectangle.swift in Sources */,
+				AA5E75911DD9CC1700136209 /* ImprovedSimulatedAnnealing.swift in Sources */,
 				AA63D3CC1DA90C7800A826FD /* Strip.swift in Sources */,
 				AA2618421DAA716700AF97C1 /* StripView.swift in Sources */,
 				AA143B6F1DC0C19500196490 /* Random.swift in Sources */,

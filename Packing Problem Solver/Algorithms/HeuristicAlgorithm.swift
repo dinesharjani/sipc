@@ -12,12 +12,14 @@ enum Algorithms: String {
 	case RandomAlgorithm = "Random"
 	case HillClimbingAlgorithm = "Local Search"
 	case SimulatedAnnealingAlgorithm = "Simulated Annealing"
+	case ImprovedSimulatedAnnealingAlgorithm = "Improved SA"
 	
 	private static let randomInstance = Random()
 	private static let hillClimbingInstance = HillClimbing()
 	private static let saInstance = SimulatedAnnealing()
+	private static let improvedSAInstance = ImprovedSimulatedAnnealing()
 	
-	static let allAlgorithms = [RandomAlgorithm, HillClimbingAlgorithm, SimulatedAnnealingAlgorithm]
+	static let allAlgorithms = [RandomAlgorithm, HillClimbingAlgorithm, SimulatedAnnealingAlgorithm, ImprovedSimulatedAnnealingAlgorithm]
 	
 	func instance() -> HeuristicAlgorithm {
 		switch self {
@@ -27,6 +29,8 @@ enum Algorithms: String {
 			return Algorithms.hillClimbingInstance
 		case .SimulatedAnnealingAlgorithm:
 			return Algorithms.saInstance
+		case .ImprovedSimulatedAnnealingAlgorithm:
+			return Algorithms.improvedSAInstance
 		}
 	}
 	
@@ -38,6 +42,8 @@ enum Algorithms: String {
 			return HillClimbingAlgorithm.instance()
 		case SimulatedAnnealingAlgorithm.rawValue:
 			return SimulatedAnnealingAlgorithm.instance()
+		case ImprovedSimulatedAnnealingAlgorithm.rawValue:
+			return ImprovedSimulatedAnnealingAlgorithm.instance()
 		default:
 			return HillClimbingAlgorithm.instance()
 		}

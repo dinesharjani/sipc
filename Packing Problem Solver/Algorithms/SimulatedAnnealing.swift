@@ -45,7 +45,7 @@ class SimulatedAnnealing: HeuristicAlgorithm {
 				if (numberOfSteps < SimulatedAnnealing.MaxNumberOfSteps) {
 					numberOfSteps += 1
 				}
-			} while (temperature >= 1)
+			} while (temperature > haltingTemperature())
 		}
 		catch {
 			// Keep going.
@@ -56,6 +56,10 @@ class SimulatedAnnealing: HeuristicAlgorithm {
 	
 	internal func startingTemperature() -> Double {
 		return 29.87
+	}
+	
+	internal func haltingTemperature() -> Double {
+		return 1.0
 	}
 	
 	internal func cooldown(temperature: Double) -> Double {

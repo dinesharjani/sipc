@@ -22,4 +22,12 @@ class ImprovedSimulatedAnnealing: SimulatedAnnealing {
 			return Movement.OneExchange.performMovement(initialSolution: startingSolution)
 		}
 	}
+	
+	override internal func startingTemperature() -> Double {
+		return 2.87
+	}
+	
+	override internal func haltingTemperature() -> Double {
+		return 0.01
+	}
 }

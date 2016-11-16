@@ -1,10 +1,10 @@
 # 1D/2D Packaging Problem Solver
 
-![Cover image.](https://github.com/the7thgoldrunner/sipc/blob/master/cover-image.png)
-
 ## Description
 
 This is a University assignment for solving both the 1D (Bin) and 2D (Strip) packaging problems. It is written entirely on Swift 3 and it targets MacOS 10.12.
+
+![Cover image.](https://github.com/the7thgoldrunner/sipc/blob/master/cover-image.png)
 
 ## Project Goal
 

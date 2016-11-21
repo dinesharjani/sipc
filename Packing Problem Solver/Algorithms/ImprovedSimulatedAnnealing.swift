@@ -10,8 +10,8 @@ import Cocoa
 
 class ImprovedSimulatedAnnealing: SimulatedAnnealing {
 
-	private static let ThreeMovementTemperatureThreshold = 17.0
-	private static let TwoMovementTemperatureThreshold = 6.0
+	private static let ThreeMovementTemperatureThreshold = 1.0
+	private static let TwoMovementTemperatureThreshold = 0.1
 	
 	override internal func neighbor(startingSolution: [Int], currentTemperature: Double) -> [Int] {
 		if (currentTemperature >= ImprovedSimulatedAnnealing.ThreeMovementTemperatureThreshold) {

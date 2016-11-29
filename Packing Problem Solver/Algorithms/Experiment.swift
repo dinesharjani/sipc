@@ -17,10 +17,15 @@ class Experiment: NSObject {
 	var averageSolution: Float {
 		get {
 			var acc: Float = 0.0
-			for value in solutionsList {
-				acc += value
+			var count = 0
+			controlQueue.sync {
+				for value in solutionsList {
+					acc += value
+				}
+				count = solutionsList.count
 			}
-			return acc / Float(solutionsList.count)
+			
+			return acc / Float(count)
 		}
 	}
 	

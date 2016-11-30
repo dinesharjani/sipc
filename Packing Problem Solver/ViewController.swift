@@ -10,6 +10,8 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+	static let AverageSolutionDelay = 1
+	
 	@IBOutlet weak var problemBrowseButton: NSButton!
 	@IBOutlet weak var problemFilePathField: NSTextField!
 	@IBOutlet weak var problemTypePopUp: NSPopUpButton!
@@ -109,7 +111,10 @@ class ViewController: NSViewController {
 			}
 			
 			if (finished) {
-				self.experimentAverageSolutionField?.stringValue = String(format: "Average Solution: %.2f", experiment.averageSolution)
+				// Delay to allow concurrent queues to finish. It's a hack, I know.
+				DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(ViewController.AverageSolutionDelay)) {
+					self.experimentAverageSolutionField?.stringValue = String(format: "Average Solution: %.2f", experiment.averageSolution)
+				}
 				
 				self.problemBrowseButton?.isEnabled = true
 				self.experimentRunButton.isEnabled = true

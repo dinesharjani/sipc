@@ -18,14 +18,11 @@ class Experiment: NSObject {
 		get {
 			var acc: Float = 0.0
 			var count = 0
-			controlQueue.sync {
-				for value in solutionsList {
-					acc += value
-				}
-				count = solutionsList.count
-			}
 			
-			return acc / Float(count)
+			for value in solutionsList {
+				acc += value
+			}
+			return acc / Float(solutionsList.count)
 		}
 	}
 	
@@ -91,19 +88,21 @@ class Experiment: NSObject {
 	}
 	
 	private func solve(threadNumber: Int) {
-		var numberOfIterations = 0
+		var threadSolutionsList = [Float]()
+		
 		autoreleasepool {
 			while (!finished) {
 				do {
 					let solutionOrder = algorithm.solve(problem: problem)
 					let solution = try problem.applySolution(solution: solutionOrder)
 					guard (!finished) else {
-						return
+						break
 					}
+					
+					threadSolutionsList.append(Float(solution.guidanceValue()))
 					
 					controlQueue.sync {
 						totalNumberOfIterations += 1
-						solutionsList.append(Float(solution.guidanceValue()))
 						
 						guard (bestSolution != nil) else {
 							bestSolution = solution
@@ -118,7 +117,14 @@ class Experiment: NSObject {
 				} catch {
 					// try again
 				}
-				numberOfIterations += 1
+			}
+			
+			// For some reason I cannot fathom, controlQueue isn't working serially as it should.
+			// So we modify the shared solutionsList in the serial UI queue.
+			callbackQueue.async {
+				[unowned self] in
+				
+				self.solutionsList.append(contentsOf: threadSolutionsList)
 			}
 		}
 	}

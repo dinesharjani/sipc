@@ -17,7 +17,6 @@ class Experiment: NSObject {
 	var averageSolution: Float {
 		get {
 			var acc: Float = 0.0
-			var count = 0
 			
 			for value in solutionsList {
 				acc += value
